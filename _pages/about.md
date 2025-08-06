@@ -31,24 +31,48 @@ I am an incoming Master student in Social Data Science at the Oxford Internet In
 
 
 # 📖 Educations
-- *2025.10 - 2026.06 (incoming)*, M.S. University of Oxford. 
-- *2021.09 - 2025.06*, B.S. University of Aberdeen.
-- *2021.09 - 2025.06*, B.S. South China Normal University.
+- *2025.10 - 2026.06 (incoming)*, Master of Science in Social Data Science, University of Oxford. 
+- *2021.09 - 2025.06*, Bachelor of Science in Artificial Intelligence, University of Aberdeen.
+- *2021.09 - 2025.06*, Bachelor of Engineering in Artificial Intelligence, South China Normal University.
 
 # 📝 Publications 
-- Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution
-**Jiaqi Xiong**, Nan Yin, Yifan Sun, Haoyang Li, Yingxu Wang, Duo Ai, Fang Pan, Shiyang Liang
-BMC Bioinformatics  [Paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-025-06186-1)
 
-- MutBERT: Probabilistic Genome Representation Improves Genomics Foundation Models
-Weicai Long, Houcheng Su, **Jiaqi Xiong**, Yanlin Zhang 
-ISMB 2025[paper](https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1)
+- Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution \
+**Jiaqi Xiong\***, Nan Yin\*, Shiyang Liang\*, Haoyang Li, Yingxu Wang, Duo Ai, Fang Pan, Jingjie Wang \
+BMC Bioinformatics, [Paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-025-06186-1) [code](https://github.com/kikixiong/XATGRN)
 
--PillarTrack: Boosting Pillar Representation for Transformer-based 3D Single Object Tracking on Point Clouds
-Weisheng Xu, Sifan Zhou, **Jiaqi Xiong**, Ziyu Zhao, Zhihang Yuan
+- MutBERT: Probabilistic Genome Representation Improves Genomics Foundation Models \
+Weicai Long, Houcheng Su, **Jiaqi Xiong**, Yanlin Zhang \
+ISMB 2025 [paper](https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1)
+
+- PillarTrack: Boosting Pillar Representation for Transformer-based 3D Single Object Tracking on Point Clouds\
+Weisheng Xu\*, Sifan Zhou\*, **Jiaqi Xiong**, Ziyu Zhao, Zhihang Yuan\
 Preprint [paper](https://arxiv.org/pdf/2404.07495?)
 
 
- 🎖 Honors and Awards
-- *2025.06* Outstanding Graduate. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+# 🎖 Honors and Award (selected)
+**🏅Honors and Scholarship**
+- *2025.06* Honorary Scholarship for Undergraduate Graduates, Aberdeen Institute of South China Normal University.
+- *2025.03* First Prize, Innovation Award Scholarship, South China Normal University.
+- *2025.01* First Prize, Outstanding Student Scholarship, South China Normal University.
+- *2024.02* Second Prize, Outstanding Student Scholarship, South China Normal University.
+- *2023.03* Second Prize, Outstanding Student Scholarship, South China Normal University.
+
+**🏆Competition Awards**
+- *2025.04* Silver Prize, China International College Students' Competition 2025.
+- *2024.08* Third Prize, National Final of China Robotics and Artificial Intelligence Competition.
+- *2024.07* First Prize, Guangdong College Computer Design Competition.
+- *2024.07* FIrst Prize, Network Technology Challenge of China Collegiate Computing Competition.
+- *2024.05* Silver Medalist, The 14th "Challenge Cup" Guangdong College Students Entrepreneurship Competition.
+- *2024.05* Honorable Mention, Mathematical Contest in Modeling (MCM) 2024.
+- *2024.04* Second Prize, The 15th Lanqiao Cup National Software Competition.
+- *2024.05* Honorable Mention, Mathematical Contest in Modeling (MCM) 2024.
+- *2023.11* Second Prize, China Undergraduate Mathematical Contest in Modelling (CUMCM).
+- *2023.11* Second Prize, Asia-Pacific Mathematical Modeling Contest (APMCM).
+- *2023.9* Second Prize, HuaShu Cup National College Student Mathematical Modeling Competition (Huashu Cup).
+- *2023.05* Honorable Mention, Mathematical Contest in Modeling (MCM) 2023.
+- *2023.04* Third Prize, The 14th Lanqiao Cup National Software Competition.
+
+
+
+
