@@ -67,11 +67,11 @@ Preprint [paper](https://arxiv.org/pdf/2404.07495?)
 - *2024.05* Honorable Mention, Mathematical Contest in Modeling (MCM) 2024.
 - *2024.04* Second Prize, The 15th Lanqiao Cup National Software Competition.
 - *2024.05* Honorable Mention, Mathematical Contest in Modeling (MCM) 2024.
-- *2023.11* Second Prize, China Undergraduate Mathematical Contest in Modelling (CUMCM).
 - *2023.11* Second Prize, Asia-Pacific Mathematical Modeling Contest (APMCM).
-- *2023.9* Second Prize, HuaShu Cup National College Student Mathematical Modeling Competition (Huashu Cup).
+- *2023.10* Second Prize, China Undergraduate Mathematical Contest in Modelling (CUMCM).
 - *2023.05* Honorable Mention, Mathematical Contest in Modeling (MCM) 2023.
 - *2023.04* Third Prize, The 14th Lanqiao Cup National Software Competition.
+- *2022.10* Third Prize, China Undergraduate Mathematical Contest in Modelling (CUMCM).
 
 
 
