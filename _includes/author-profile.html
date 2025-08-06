@@ -201,6 +201,9 @@
       {% if author.googlescholar %}
         <a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i></a>
       {% endif %}
+      {% if author.rednote %}
+        <a href="https://www.xiaohongshu.com/user/profile/{{author.rednote}}"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> </a>
+      {% endif %}
       {% if author.pubmed %}
         <a href="{{ author.pubmed }}"><i class="ai ai-pubmed-square ai-fw"></i></a>
       {% endif %}
