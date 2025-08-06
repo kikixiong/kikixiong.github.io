@@ -32,27 +32,25 @@ I am an incoming Master student in Social Data Science at the Oxford Internet In
 # 📝 Publications 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ISMB 2025</div><img src='images/MutBERT.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ISMB 2025</div><img src='images/MutBERT.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[MutBERT: Probabilistic Genome Representation Improves Genomics Foundation Models](https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1)
+- MutBERT: Probabilistic Genome Representation Improves Genomics Foundation Models
+Weicai Long, Houcheng Su, **Jiaqi Xiong**, Yanlin Zhang \
 
-**Weicai Long**, Houcheng Su, **Jiaqi Xiong**, Yanlin Zhang
-
-[**Project**](https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1) 
-- Accepted at Conference on Intelligent Systems for Molecular Biology (ISMB 2025)
+ISMB 2025[paper](https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1)
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">BMC Bioinf 2025</div><img src='images/XATGRN.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">BMC Bioinf 2025</div><img src='images/XATGRN.pdf' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution](https://arxiv.org/abs/2412.16220)
+Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution
 
 **Jiaqi Xiong**, Nan Yin, Yifan Sun, Haoyang Li, Yingxu Wang, Duo Ai, Fang Pan, Shiyang Liang
 
-[**Project**](https://arxiv.org/abs/2412.16220) 
-- Accepted at BMC Bioinformatics (2025)
+BMC Bioinformatics  [**Paper**](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-025-06186-1)
+
 </div>
 </div>
 
