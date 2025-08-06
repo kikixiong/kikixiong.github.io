@@ -50,7 +50,7 @@ Weisheng Xu\*, Sifan Zhou\*, **Jiaqi Xiong**, Ziyu Zhao, Zhihang Yuan\
 Preprint [paper](https://arxiv.org/pdf/2404.07495?)
 
 
-# 🎖 Honors and Award (selected)
+# 🎖 Honors and Award
 **🏅Honors and Scholarship**
 - *2025.06* Honorary Scholarship for Undergraduate Graduates, Aberdeen Institute of South China Normal University.
 - *2025.03* First Prize, Innovation Award Scholarship, South China Normal University.
