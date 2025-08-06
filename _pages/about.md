@@ -29,35 +29,26 @@ I am an incoming Master student in Social Data Science at the Oxford Internet In
 - *2025.06*: &nbsp;🎉🎉 One paper accepted to BMC Bioinfomatics. 
 - *2025.01*: &nbsp;🎉🎉 One paper accepted to 33th conference on Intelligent Systems for Molecular Biology.. 
 
-# 📝 Publications 
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ISMB 2025</div><img src='images/MutBERT.png' alt="sym" width="80%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-- MutBERT: Probabilistic Genome Representation Improves Genomics Foundation Models
-Weicai Long, Houcheng Su, **Jiaqi Xiong**, Yanlin Zhang \
-
-ISMB 2025[paper](https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1)
-</div>
-</div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">BMC Bioinf 2025</div><img src='images/XATGRN.pdf' alt="sym" width="80%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution
-
-**Jiaqi Xiong**, Nan Yin, Yifan Sun, Haoyang Li, Yingxu Wang, Duo Ai, Fang Pan, Shiyang Liang
-
-BMC Bioinformatics  [**Paper**](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-025-06186-1)
-
-</div>
-</div>
-
-- *2025.06* Outstanding Graduate. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
 # 📖 Educations
 - *2025.10 - 2026.06 (incoming)*, M.S. University of Oxford. 
 - *2021.09 - 2025.06*, B.S. University of Aberdeen.
 - *2021.09 - 2025.06*, B.S. South China Normal University.
+
+# 📝 Publications 
+- Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution
+**Jiaqi Xiong**, Nan Yin, Yifan Sun, Haoyang Li, Yingxu Wang, Duo Ai, Fang Pan, Shiyang Liang
+BMC Bioinformatics  [Paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-025-06186-1)
+
+- MutBERT: Probabilistic Genome Representation Improves Genomics Foundation Models
+Weicai Long, Houcheng Su, **Jiaqi Xiong**, Yanlin Zhang 
+ISMB 2025[paper](https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1)
+
+-PillarTrack: Boosting Pillar Representation for Transformer-based 3D Single Object Tracking on Point Clouds
+Weisheng Xu, Sifan Zhou, **Jiaqi Xiong**, Ziyu Zhao, Zhihang Yuan
+Preprint [paper](https://arxiv.org/pdf/2404.07495?)
+
+
+ 🎖 Honors and Awards
+- *2025.06* Outstanding Graduate. 
+- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
