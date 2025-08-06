@@ -17,16 +17,45 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+Hi! I am Jiaqi Xiong (熊嘉琪)
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+I am an incoming Master student in Social Data Science at the Oxford Internet Institute, University of Oxford, starting this October. I obtained my dual bachelor's degree in Artificial Intelligence from the University of Aberdeen (with first degree honour) and South China Normal University (SCNU) in 2025, supervised by [Chris Norval](http://cnorval.com/). Currently, my research interest focus on **Graph Neural Network**, **AI for Science** and **Trustworthy AI** (equivalent). 
+
+<span style="color:red">**I am actively seeking PhD positions for Fall 2026! If you are interested in me, please contact me!**</span>
 
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2025.06*: &nbsp;🎉🎉 Obtain bachelor's degree from University of Aberdeen and South China Normal University.
+- *2025.06*: &nbsp;🎉🎉 One paper accepted to BMC Bioinfomatics. 
+- *2025.01*: &nbsp;🎉🎉 One paper accepted to 33th conference on Intelligent Systems for Molecular Biology.. 
 
 # 📝 Publications 
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ISMB 2025</div><img src='images/MutBERT.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[MutBERT: Probabilistic Genome Representation Improves Genomics Foundation Models](https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1)
+
+**Weicai Long**, Houcheng Su, **Jiaqi Xiong**, Yanlin Zhang
+
+[**Project**](https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1) 
+- Accepted at Conference on Intelligent Systems for Molecular Biology (ISMB 2025)
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">BMC Bioinf 2025</div><img src='images/XATGRN.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution](https://arxiv.org/abs/2412.16220)
+
+**Jiaqi Xiong**, Nan Yin, Yifan Sun, Haoyang Li, Yingxu Wang, Duo Ai, Fang Pan, Shiyang Liang
+
+[**Project**](https://arxiv.org/abs/2412.16220) 
+- Accepted at BMC Bioinformatics (2025)
+</div>
+</div>
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -43,16 +72,10 @@ My research interest includes neural machine translation and computer vision. I 
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2025.06* Outstanding Graduate. 
 - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
 # 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
-
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+- *2025.10 - 2026.06 (incoming)*, M.S. University of Oxford. 
+- *2021.09 - 2025.06*, B.S. University of Aberdeen.
+- *2021.09 - 2025.06*, B.S. South China Normal University.
