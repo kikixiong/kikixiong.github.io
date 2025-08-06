@@ -63,15 +63,12 @@ Preprint [paper](https://arxiv.org/pdf/2404.07495?)
 - *2024.08* Third Prize, National Final of China Robotics and Artificial Intelligence Competition.
 - *2024.07* First Prize, Guangdong College Computer Design Competition.
 - *2024.07* FIrst Prize, Network Technology Challenge of China Collegiate Computing Competition.
-- *2024.05* Silver Medalist, The 14th "Challenge Cup" Guangdong College Students Entrepreneurship Competition.
-- *2024.05* Honorable Mention, Mathematical Contest in Modeling (MCM) 2024.
+- *2024.05* Silver Prize, The 14th "Challenge Cup" Guangdong College Students Entrepreneurship Competition.
 - *2024.04* Second Prize, The 15th Lanqiao Cup National Software Competition.
-- *2024.05* Honorable Mention, Mathematical Contest in Modeling (MCM) 2024.
 - *2023.11* Second Prize, Asia-Pacific Mathematical Modeling Contest (APMCM).
 - *2023.10* Second Prize, China Undergraduate Mathematical Contest in Modelling (CUMCM).
 - *2023.05* Honorable Mention, Mathematical Contest in Modeling (MCM) 2023.
-- *2023.04* Third Prize, The 14th Lanqiao Cup National Software Competition.
-- *2022.10* Third Prize, China Undergraduate Mathematical Contest in Modelling (CUMCM).
+
 
 
 
