@@ -25,9 +25,9 @@ I am an incoming Master student in Social Data Science at the Oxford Internet In
 
 
 # 🔥 News
-- *2025.06*: &nbsp;🎉🎉 Obtain bachelor's degree from University of Aberdeen and South China Normal University.
-- *2025.06*: &nbsp;🎉🎉 One paper accepted to BMC Bioinfomatics. 
-- *2025.01*: &nbsp;🎉🎉 One paper accepted to 33th conference on Intelligent Systems for Molecular Biology.. 
+- *2025.06*: &nbsp;🎉 Obtain bachelor's degree from University of Aberdeen and South China Normal University.
+- *2025.06*: &nbsp;🎉 One paper accepted to BMC Bioinfomatics. 
+- *2025.01*: &nbsp;🎉 One paper accepted to 33th conference on Intelligent Systems for Molecular Biology.. 
 
 
 # 📖 Educations
