@@ -19,7 +19,7 @@ redirect_from:
 
 Hi! I am Jiaqi Xiong (熊嘉琪)
 
-I am a Master student in [Social Data Science](https://www.oii.ox.ac.uk/people/profiles/jiaqi-xiong/) at the [Oxford Internet Institute](https://www.oii.ox.ac.uk/), University of Oxford. I obtained my dual bachelor's degree in Artificial Intelligence from the University of Aberdeen (with first-degree honours) and South China Normal University (SCNU) in 2025, where I completed my thesis under supervision of [Chris Norval](http://cnorval.com/). My research focuses on **graph neural networks (GNNs)** and **AI for Science**, especially DNA/RNA foundation models and the application of GNNs to biological sciences and sports analytics. I also maintain active interests in multi-agent systems and trustworthy AI.
+I am a Master student in [Social Data Science](https://www.oii.ox.ac.uk/people/profiles/jiaqi-xiong/) at the [Oxford Internet Institute](https://www.oii.ox.ac.uk/), University of Oxford. I obtained my dual bachelor's degree in Artificial Intelligence from the University of Aberdeen (with first-degree honours) and South China Normal University (SCNU) in 2025, where I completed my thesis under supervision of [Chris Norval](http://cnorval.com/). My research focuses on applying **graph neural networks (GNNs)** to the biological/social sciences and sports analytics, and building **trustworthy Agentic AI systems**.
 
 <span style="color:red">**🙋 I am actively seeking PhD positions for Fall 2026 and RA/intern position for 2026 summer! If you are interested in me, please contact me!**</span>
 
