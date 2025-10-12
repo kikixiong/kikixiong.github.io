@@ -27,8 +27,8 @@ author:
   location         : "Oxford, UK"
   employer         :
   pubmed           : 
-  googlescholar    : #"https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "yoshiki.xiong@outlook.com"
+  googlescholar    : "https://scholar.google.com/citations?user=K9qDCBUAAAAJ&hl=en&oi=ao"
+  email            : "jiaqi.xiong@oii.ox.ac.uk"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -43,7 +43,7 @@ author:
   instagram        :
   impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : # e.g., "linkedin username"
+  linkedin         :"jiaqi-xiong-91b238386"
   dblp             : # e.g., "https://dblp.org/pid/xx/xxxx.html"
   orcid            : # e.g., "https://orcid.org/xxxx"
   pinterest        :
