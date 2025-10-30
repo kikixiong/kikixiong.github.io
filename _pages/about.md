@@ -59,7 +59,7 @@ Preprint [paper](https://arxiv.org/pdf/2404.07495?)
 - *2023.03* Second Prize, Outstanding Student Scholarship, South China Normal University.
 
 **🏆Competition Awards**
-- *2025.04* Silver Prize, China International College Students' Competition 2025.
+- *2025.04* Silver Prize, China International College Students' Innovation Competition 2025.
 - *2024.08* Third Prize, National Final of China Robotics and Artificial Intelligence Competition.
 - *2024.07* First Prize, Guangdong College Computer Design Competition.
 - *2024.07* FIrst Prize, Network Technology Challenge of China Collegiate Computing Competition.
