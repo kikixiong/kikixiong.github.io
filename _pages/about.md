@@ -25,6 +25,8 @@ I am a Master student in [Social Data Science](https://www.oii.ox.ac.uk/people/p
 
 
 # 🔥 News
+- *2025.11*: &nbsp;🎉 One paper accepted to NeurIPS 2025 workshop.
+- *2025.10*: &nbsp;🎉 Joined the University of Oxford as a master student.
 - *2025.06*: &nbsp;🎉 Obtain bachelor's degree from University of Aberdeen and South China Normal University.
 - *2025.06*: &nbsp;🎉 One paper accepted to BMC Bioinfomatics. 
 - *2025.01*: &nbsp;🎉 One paper accepted to 33th conference on Intelligent Systems for Molecular Biology.
