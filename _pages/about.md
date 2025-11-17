@@ -39,6 +39,11 @@ I am a Master student in [Social Data Science](https://www.oii.ox.ac.uk/people/p
 
 # 📝 Publications 
 
+- Psychometrically Grounded Evaluation of LLM Personas \
+**Jiaqi Xiong** \
+PersonaLLM Workshop @ NeurIPS 2025
+
+
 - Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution \
 **Jiaqi Xiong\***, Nan Yin\*, Shiyang Liang\*, Haoyang Li, Yingxu Wang, Duo Ai, Fang Pan, Jingjie Wang \
 BMC Bioinformatics, [Paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-025-06186-1) [code](https://github.com/kikixiong/XATGRN)
