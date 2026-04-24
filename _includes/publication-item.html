@@ -1,0 +1,23 @@
+{%- assign pub = include.pub -%}
+{%- assign thumb = pub.thumbnail | default: "images/publications/placeholder.svg" -%}
+
+<article class="ox-pub">
+  <div class="ox-pub__thumb">
+    <img src="{{ thumb }}" alt="{{ pub.title | escape }}" loading="lazy">
+  </div>
+  <div class="ox-pub__body">
+    <h3 class="ox-pub__title">{{ pub.title }}</h3>
+    <div class="ox-pub__authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+    <div class="ox-pub__venue">
+      {% if pub.venue_short %}<span class="ox-pub__badge">{{ pub.venue_short }}</span>{% endif %}
+      <span class="ox-pub__venue-full">{{ pub.venue }}</span>
+    </div>
+    {% if pub.links and pub.links.size > 0 %}
+    <div class="ox-pub__links">
+      {% for link in pub.links %}
+        <a href="{{ link.url }}" class="ox-pub__link">{{ link.name }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</article>
