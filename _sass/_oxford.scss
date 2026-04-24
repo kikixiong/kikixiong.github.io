@@ -1,0 +1,236 @@
+/* ==========================================================================
+   Oxford Classic — core overrides
+   Loaded AFTER academicpages partials so cascade wins.
+   ========================================================================== */
+
+/* CSS custom properties for theme switching ------------------------------ */
+:root {
+  --ox-bg:          #{$parchment};
+  --ox-surface:     #{$ox-surface};
+  --ox-nav-bg:      #{$oxford-blue};
+  --ox-text:        #{$ink};
+  --ox-text-muted:  #{$ink-muted};
+  --ox-border:      #{$ox-border};
+  --ox-primary:     #{$oxford-blue};
+  --ox-gold:        #{$oxford-gold};
+  --ox-link:        #{$oxford-blue};
+  --ox-link-hover:  #{$oxford-gold};
+}
+
+/* --- Reset old academic-pages layout --------------------------------- */
+html {
+  font-size: 15px;
+  background: var(--ox-bg);
+}
+
+body {
+  background: var(--ox-bg);
+  color: var(--ox-text);
+  font-family: $serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#main {
+  max-width: $page-max !important;
+  margin: 0 auto !important;
+  padding: 32px 24px 48px !important;
+  animation: none;
+}
+
+.page {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+}
+
+.page__inner-wrap,
+.page__content {
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.sidebar { display: none !important; }
+
+#page-body { padding-top: $topnav-height; }
+
+/* --- Typography --------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $display;
+  color: var(--ox-primary);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  margin-top: 1.8em;
+  margin-bottom: 0.4em;
+}
+
+h1 { font-size: 1.85rem; border-bottom: none !important; padding-bottom: 0 !important; }
+h2 { font-size: 1.4rem;  }
+h3 { font-size: 1.1rem;  }
+
+.page__content > h1 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.4rem;
+  margin-top: 2.2em;
+}
+.page__content > h1::before,
+.page__content > h1::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--ox-gold);
+  opacity: 0.65;
+}
+
+.page__content p, .page__content li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ox-text);
+}
+
+.page__content ul {
+  padding-left: 1.2em;
+}
+
+.page__content li {
+  margin-bottom: 0.25em;
+}
+
+.page__content strong, .page__content b {
+  color: var(--ox-primary);
+  font-weight: 700;
+}
+
+/* --- Links -------------------------------------------------------------- */
+.page__content a {
+  color: var(--ox-link);
+  text-decoration: none;
+  background-image: linear-gradient(var(--ox-gold), var(--ox-gold));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.28s ease-out, color 0.2s ease-out;
+  padding-bottom: 1px;
+}
+
+.page__content a:hover {
+  background-size: 100% 1px;
+  color: var(--ox-link-hover);
+}
+
+/* --- About header block (avatar + name + GS badge) ---------------------- */
+.ox-about-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.ox-about-header__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--ox-gold);
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--ox-primary);
+}
+
+.ox-about-header__info { flex: 1; min-width: 0; }
+
+.ox-about-header__name {
+  font-family: $display;
+  color: var(--ox-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.ox-about-header__meta {
+  font-family: $sans-serif;
+  color: var(--ox-text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.ox-about-header__citations img {
+  height: 20px;
+  vertical-align: middle;
+}
+
+/* --- Research chips ----------------------------------------------------- */
+.ox-chips {
+  margin: 1.2em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ox-chip {
+  display: inline-block;
+  font-family: $sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ox-primary);
+  border: 1px solid var(--ox-primary);
+  padding: 3px 11px;
+  border-radius: $radius-pill;
+  background: transparent;
+  transition: all 0.2s ease-out;
+}
+
+.ox-chip:hover {
+  background: var(--ox-primary);
+  color: var(--ox-gold);
+}
+
+/* --- Seeking-PhD callout ------------------------------------------------ */
+.ox-callout {
+  border: 1px solid var(--ox-border);
+  border-left: 3px solid var(--ox-gold);
+  background: linear-gradient(180deg, rgba(200,169,81,0.06), rgba(200,169,81,0.02));
+  padding: 14px 16px;
+  margin: 1.6em 0;
+  border-radius: $radius-md;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ox-text);
+}
+
+.ox-callout__label {
+  font-family: $sans-serif;
+  font-size: 0.7rem;
+  color: var(--ox-primary);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* --- Mobile ------------------------------------------------------------- */
+@include breakpoint(max-width $small) {
+  html { font-size: 14.5px; }
+
+  #main { padding: 20px 16px 40px !important; }
+
+  .ox-about-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .ox-about-header__avatar { width: 64px; height: 64px; }
+  .ox-about-header__name   { font-size: 1.3rem; }
+}
