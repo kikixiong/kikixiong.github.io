@@ -1,0 +1,36 @@
+publications:
+  - title: "Psychometrically Grounded Evaluation of LLM Personas"
+    authors: "**Jiaqi Xiong**"
+    venue: "PersonaLLM Workshop @ NeurIPS 2025"
+    venue_short: "NeurIPS '25"
+    date: "2025-11"
+    thumbnail: ""
+    links: []
+
+  - title: "Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution"
+    authors: "**Jiaqi Xiong\\***, Nan Yin\\*, Shiyang Liang\\*, Haoyang Li, Yingxu Wang, Duo Ai, Fang Pan, Jingjie Wang"
+    venue: "BMC Bioinformatics (2025)"
+    venue_short: "BMC Bioinf."
+    date: "2025-06"
+    thumbnail: ""
+    links:
+      - { name: "Paper", url: "https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-025-06186-1" }
+      - { name: "Code",  url: "https://github.com/kikixiong/XATGRN" }
+
+  - title: "MutBERT: Probabilistic Genome Representation Improves Genomics Foundation Models"
+    authors: "Weicai Long, Houcheng Su, **Jiaqi Xiong**, Yanlin Zhang"
+    venue: "ISMB 2025"
+    venue_short: "ISMB '25"
+    date: "2025-01"
+    thumbnail: "images/MutBERT.png"
+    links:
+      - { name: "Paper", url: "https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1" }
+
+  - title: "PillarTrack: Boosting Pillar Representation for Transformer-based 3D Single Object Tracking on Point Clouds"
+    authors: "Weisheng Xu\\*, Sifan Zhou\\*, **Jiaqi Xiong**, Ziyu Zhao, Zhihang Yuan"
+    venue: "Preprint"
+    venue_short: "Preprint"
+    date: "2024-04"
+    thumbnail: ""
+    links:
+      - { name: "Paper", url: "https://arxiv.org/pdf/2404.07495" }
