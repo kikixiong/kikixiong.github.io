@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Oxford Classic — Dark mode
+   Activated by `<html data-theme="dark">`
+   ========================================================================== */
+
+html[data-theme="dark"] {
+  --ox-bg:         #0b1426;
+  --ox-surface:    #111c33;
+  --ox-nav-bg:     #061027;
+  --ox-text:       #e8e6de;
+  --ox-text-muted: #9aa3b2;
+  --ox-border:     #1f2a44;
+  --ox-primary:    #c8a951;
+  --ox-gold:       #c8a951;
+  --ox-link:       #e8e6de;
+  --ox-link-hover: #c8a951;
+}
+
+html[data-theme="dark"] body {
+  background: var(--ox-bg);
+  color: var(--ox-text);
+}
+
+html[data-theme="dark"] .ox-topnav {
+  background: var(--ox-nav-bg);
+  border-bottom-color: var(--ox-gold);
+}
+
+html[data-theme="dark"] .ox-topnav__logo { color: $parchment; }
+html[data-theme="dark"] .ox-topnav__logo:hover { color: $oxford-gold; }
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] .page__content > h1,
+html[data-theme="dark"] .ox-about-header__name,
+html[data-theme="dark"] .ox-pub__title {
+  color: $oxford-gold;
+}
+
+html[data-theme="dark"] .ox-chip {
+  color: $oxford-gold;
+  border-color: rgba(200, 169, 81, 0.55);
+}
+html[data-theme="dark"] .ox-chip:hover {
+  background: $oxford-gold;
+  color: $oxford-blue-deep;
+}
+
+html[data-theme="dark"] .ox-callout {
+  background: linear-gradient(180deg, rgba(200,169,81,0.10), rgba(200,169,81,0.02));
+  border-color: rgba(200, 169, 81, 0.25);
+}
+html[data-theme="dark"] .ox-callout__label { color: $oxford-gold; }
+
+html[data-theme="dark"] .ox-pub:hover {
+  background: var(--ox-surface);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+html[data-theme="dark"] .ox-pub__thumb img { border-color: var(--ox-border); }
+html[data-theme="dark"] .ox-pub__badge {
+  color: $oxford-blue-deep;
+  background: $oxford-gold;
+}
+html[data-theme="dark"] .ox-pub__link {
+  color: $oxford-gold;
+  border-color: var(--ox-border);
+}
+html[data-theme="dark"] .ox-pub__link:hover {
+  background: $oxford-gold;
+  color: $oxford-blue-deep;
+  border-color: $oxford-gold;
+}
+
+html[data-theme="dark"] .ox-footer {
+  border-top-color: var(--ox-border);
+}
+html[data-theme="dark"] .ox-footer__social a { color: $oxford-gold; }
+html[data-theme="dark"] .ox-footer__social a:hover { color: $parchment; }
+
+html[data-theme="dark"] .page__content a {
+  color: $oxford-gold;
+}
+html[data-theme="dark"] .page__content a:hover {
+  color: $parchment;
+}
+
+html[data-theme="dark"] .page__content strong,
+html[data-theme="dark"] .page__content b {
+  color: $oxford-gold;
+}
