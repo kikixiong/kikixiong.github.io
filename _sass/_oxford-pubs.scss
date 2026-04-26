@@ -102,7 +102,7 @@
 .ox-pub__title {
   font-family: $display;
   color: var(--ox-primary);
-  font-size: 1.08rem;
+  font-size: 1.18rem;
   font-weight: 700;
   line-height: 1.3;
   margin: 0 0 6px;
@@ -114,9 +114,9 @@
 }
 
 .ox-pub__authors {
-  font-size: 0.92rem;
+  font-size: 0.97rem;
   color: var(--ox-text);
-  line-height: 1.45;
+  line-height: 1.5;
   margin-bottom: 6px;
 }
 .ox-pub__authors strong,
@@ -125,7 +125,7 @@
 }
 
 .ox-pub__venue {
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   color: var(--ox-text-muted);
   display: flex;
   align-items: center;
@@ -274,4 +274,69 @@
   }
   .ox-pub__thumb img { width: 96px; height: 96px; }
   .ox-pub__title { font-size: 1rem; }
+}
+
+/* --- First-author badge (overlay on thumbnail) --- */
+.ox-pub__first {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  font-family: $sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $oxford-blue-deep;
+  background: $oxford-gold;
+  padding: 2px 7px;
+  border-radius: $radius-sm;
+  box-shadow: 0 1px 4px rgba(0, 33, 71, 0.3);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* --- Method / topic tag chips --- */
+.ox-pub__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 6px 0;
+}
+
+.ox-pub__tag {
+  font-family: $sans-serif;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ox-text-muted);
+  background: transparent;
+  border: 1px solid var(--ox-border);
+  padding: 2px 8px;
+  border-radius: $radius-sm;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.ox-pub:hover .ox-pub__tag {
+  color: var(--ox-primary);
+  border-color: rgba(200, 169, 81, 0.45);
+}
+
+/* --- External-link arrow (only on anchor links, not BibTeX toggle) --- */
+a.ox-pub__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+a.ox-pub__link .ox-pub__link-arrow {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+}
+
+a.ox-pub__link:hover .ox-pub__link-arrow {
+  opacity: 1;
+  transform: translateX(0);
 }

@@ -1,10 +1,31 @@
 publications:
+  - title: "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models"
+    authors: "**Jiaqi Xiong**, Yunjia Qi, Qi Cao, Yu Zheng, Yutong Zhang, Ziteng Wang, Ruofan Liao, Weisheng Xu, Sichen Liu"
+    venue: "Preprint"
+    venue_short: "Preprint"
+    date: "2026-03"
+    thumbnail: "images/publications/DEAF.png"
+    first_author: true
+    tags: ["Audio", "Benchmark", "MLLM"]
+    links:
+      - { name: "Paper", url: "https://arxiv.org/abs/2603.18048" }
+    bibtex: |
+      @article{xiong2026deaf,
+        title         = {{DEAF}: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models},
+        author        = {Xiong, Jiaqi and Qi, Yunjia and Cao, Qi and Zheng, Yu and Zhang, Yutong and Wang, Ziteng and Liao, Ruofan and Xu, Weisheng and Liu, Sichen},
+        year          = {2026},
+        eprint        = {2603.18048},
+        archivePrefix = {arXiv},
+        primaryClass  = {cs.AI}
+      }
+
   - title: "Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control"
     authors: "Weisheng Xu, Qiwei Wu, Jiaxi Zhang, Tan Jing, Yangfan Li, Yuetong Fang, **Jiaqi Xiong**, Kai Wu, Rong Ou, Renjing Xu"
-    venue: "CVPR 2026 (To appear)"
+    venue: "CVPR 2026"
     venue_short: "CVPR '26"
     date: "2026-02"
     thumbnail: "images/publications/CLAIMS.png"
+    tags: ["Humanoid", "Motion", "Robotics"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2602.21599" }
     bibtex: |
@@ -13,27 +34,48 @@ publications:
         author        = {Xu, Weisheng and Wu, Qiwei and Zhang, Jiaxi and Jing, Tan and Li, Yangfan and Fang, Yuetong and Xiong, Jiaqi and Wu, Kai and Ou, Rong and Xu, Renjing},
         booktitle     = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
         year          = {2026},
-        note          = {To appear},
         eprint        = {2602.21599},
         archivePrefix = {arXiv},
         primaryClass  = {cs.RO}
       }
 
+  - title: "V-FAT: Benchmarking Visual Fidelity Against Text-bias"
+    authors: "Ziteng Wang, Yujie He, Guanliang Li, Siqi Yang, **Jiaqi Xiong**, Songxiang Liu"
+    venue: "Preprint"
+    venue_short: "Preprint"
+    date: "2026-01"
+    thumbnail: "images/publications/V-FAT.png"
+    tags: ["Vision-Language", "Benchmark", "MLLM"]
+    links:
+      - { name: "Paper", url: "https://arxiv.org/abs/2601.04897" }
+    bibtex: |
+      @article{wang2026vfat,
+        title         = {{V-FAT}: Benchmarking Visual Fidelity Against Text-bias},
+        author        = {Wang, Ziteng and He, Yujie and Li, Guanliang and Yang, Siqi and Xiong, Jiaqi and Liu, Songxiang},
+        year          = {2026},
+        eprint        = {2601.04897},
+        archivePrefix = {arXiv},
+        primaryClass  = {cs.CL}
+      }
+
   - title: "Psychometrically Grounded Evaluation of LLM Personas"
     authors: "**Jiaqi Xiong**"
-    venue: "PersonaLLM Workshop @ NeurIPS 2025"
+    venue: "First Workshop on LLM Persona Modeling @ NeurIPS 2025"
     venue_short: "NeurIPS '25"
     date: "2025-11"
     thumbnail: ""
-    links: []
+    first_author: true
+    tags: ["LLM", "Evaluation", "Persona"]
+    links:
+      - { name: "Paper",      url: "https://openreview.net/forum?id=j1jDozwwmx" }
+      - { name: "NeurIPS",    url: "https://neurips.cc/virtual/2025/loc/mexico-city/129930" }
     bibtex: |
-      % NOTE: This BibTeX is unverified — please replace with the official
-      % citation from the workshop's OpenReview / proceedings page.
       @inproceedings{xiong2025psychometrically,
         title     = {Psychometrically Grounded Evaluation of {LLM} Personas},
         author    = {Xiong, Jiaqi},
-        booktitle = {PersonaLLM Workshop at the Conference on Neural Information Processing Systems (NeurIPS)},
-        year      = {2025}
+        booktitle = {First Workshop on {LLM} Persona Modeling at the Conference on Neural Information Processing Systems (NeurIPS)},
+        year      = {2025},
+        url       = {https://openreview.net/forum?id=j1jDozwwmx}
       }
 
   - title: "Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution"
@@ -42,6 +84,8 @@ publications:
     venue_short: "BMC Bioinf."
     date: "2025-06"
     thumbnail: "images/publications/XATGRN.png"
+    first_author: true
+    tags: ["GNN", "Bioinformatics", "Genomics"]
     links:
       - { name: "Paper", url: "https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-025-06186-1" }
       - { name: "Code",  url: "https://github.com/kikixiong/XATGRN" }
@@ -63,6 +107,7 @@ publications:
     venue_short: "ISMB '25"
     date: "2025-01"
     thumbnail: "images/MutBERT.png"
+    tags: ["Genomics", "Foundation Model", "BERT"]
     links:
       - { name: "Paper", url: "https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1" }
     bibtex: |
@@ -81,6 +126,7 @@ publications:
     venue_short: "Preprint"
     date: "2024-04"
     thumbnail: "images/publications/PillarTrack.png"
+    tags: ["3D Tracking", "Point Cloud", "Transformer"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2404.07495" }
     bibtex: |

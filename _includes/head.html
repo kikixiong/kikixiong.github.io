@@ -2,6 +2,32 @@
 
 {% include seo.html %}
 
+{% comment %}
+  Open Graph + Twitter Card augmentations.
+  jekyll-seo-tag (via _includes/seo.html) already emits: og:locale, og:site_name,
+  og:title, og:url, and og:description (only when page.excerpt is set). It only
+  emits twitter:* tags when site.twitter.username is configured (currently it
+  isn't). The tags below ADD the missing pieces (og:type=profile, og:image,
+  twitter:card=summary, profile:* names) so LinkedIn / Twitter / WeChat get a
+  rich preview with the avatar. Placed AFTER seo.html so duplicates take
+  last-wins precedence.
+{% endcomment %}
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{{ site.author.name | default: site.title }} — Academic homepage">
+<meta property="og:description" content="{{ site.author.bio | default: site.description }}">
+<meta property="og:image" content="{{ '/images/kiki.png' | absolute_url }}">
+<meta property="og:image:alt" content="{{ site.author.name }} portrait">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="{{ site.author.name }}">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ site.author.name }}">
+<meta name="twitter:description" content="{{ site.author.bio }}">
+<meta name="twitter:image" content="{{ '/images/kiki.png' | absolute_url }}">
+
+<meta property="profile:first_name" content="Jiaqi">
+<meta property="profile:last_name" content="Xiong">
+
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +37,10 @@
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
+
+<!-- Favicon (single PNG; sufficient for GitHub Pages) -->
+<link rel="icon" type="image/png" href="{{ '/images/kiki.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/images/kiki.png' | relative_url }}">
 
 <!-- Oxford Classic fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">

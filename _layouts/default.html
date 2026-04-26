@@ -10,8 +10,10 @@ layout: compress
   </head>
 
   <body>
+    <div class="ox-mount-veil" aria-hidden="true"></div>
 
     {% include browser-upgrade.html %}
+    <div class="ox-progress" aria-hidden="true"></div>
     {% include masthead.html %}
 
     <div id="page-body">
@@ -30,6 +32,8 @@ layout: compress
 
       {% include footer.html %}
     </div>
+
+    <button class="ox-to-top" aria-label="Back to top" type="button">↑</button>
 
     {% include scripts.html %}
 

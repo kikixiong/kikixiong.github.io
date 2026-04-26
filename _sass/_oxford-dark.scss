@@ -27,7 +27,12 @@ html[data-theme="dark"] .ox-topnav {
 }
 
 html[data-theme="dark"] .ox-topnav[data-scrolled="true"] {
-  background: rgba(6, 16, 39, 0.78);
+  background: rgba(6, 16, 39, 0.72);
+  border-color: rgba(200, 169, 81, 0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 10px 30px rgba(0, 0, 0, 0.55),
+    0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 html[data-theme="dark"] .ox-topnav__logo { color: $parchment; }
@@ -136,7 +141,13 @@ html[data-theme="dark"] .ox-pub__bib-copy:hover {
   border-color: $oxford-gold;
 }
 
-/* --- Drop cap on About paragraph (dark) --- */
-html[data-theme="dark"] .page__content > p:nth-of-type(2)::first-letter {
-  color: var(--ox-gold);
+/* --- Topic tags (dark) --- */
+html[data-theme="dark"] .ox-pub__tag {
+  color: $oxford-gold;
+  border-color: rgba(200, 169, 81, 0.3);
 }
+html[data-theme="dark"] .ox-pub:hover .ox-pub__tag {
+  color: $parchment;
+  border-color: $oxford-gold;
+}
+

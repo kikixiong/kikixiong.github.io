@@ -4,20 +4,58 @@
 
 .ox-topnav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   height: $topnav-height;
   background: var(--ox-nav-bg);
-  border-bottom: 1px solid var(--ox-gold);
+  border: 1px solid transparent;
+  border-bottom-color: var(--ox-gold);
+  border-radius: 0;
   z-index: 100;
   box-shadow: 0 1px 0 rgba(0,0,0,0.08);
-  transition: background 0.25s ease-out, box-shadow 0.25s ease-out, backdrop-filter 0.25s ease-out;
+  transition:
+    background 0.3s ease-out,
+    box-shadow 0.4s ease-out,
+    backdrop-filter 0.3s ease-out,
+    border-radius 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 0.3s ease-out,
+    height 0.3s ease-out,
+    top 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    left 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    right 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    width 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
+/* Scrolled state: floating capsule */
 .ox-topnav[data-scrolled="true"] {
-  background: rgba(0, 33, 71, 0.82);
-  backdrop-filter: saturate(140%) blur(10px);
-  -webkit-backdrop-filter: saturate(140%) blur(10px);
-  box-shadow: 0 4px 18px rgba(0, 33, 71, 0.22);
+  background: rgba(0, 33, 71, 0.74);
+  backdrop-filter: saturate(150%) blur(14px);
+  -webkit-backdrop-filter: saturate(150%) blur(14px);
+  border: 1px solid rgba(200, 169, 81, 0.35);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 8px 28px rgba(0, 33, 71, 0.30),
+    0 2px 8px rgba(0, 33, 71, 0.18);
+
+  @include breakpoint(min-width 720px) {
+    top: 12px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: min(1100px, calc(100% - 32px));
+    height: 48px;
+    border-radius: 999px;
+  }
+}
+
+/* When floating, shrink the inner gutter so links don't drift apart */
+@include breakpoint(min-width 720px) {
+  .ox-topnav[data-scrolled="true"] .ox-topnav__inner {
+    padding: 0 28px;
+  }
 }
 
 .ox-topnav__inner {

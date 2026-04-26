@@ -19,7 +19,7 @@
 
 /* --- Reset old academic-pages layout --------------------------------- */
 html {
-  font-size: 15px;
+  font-size: 16px;
   background: var(--ox-bg);
 }
 
@@ -117,7 +117,7 @@ body {
 .ox-sidebar__name {
   font-family: $display;
   color: var(--ox-primary);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.15;
   margin: 0 0 2px;
@@ -127,17 +127,17 @@ body {
 .ox-sidebar__zh {
   font-family: $display;
   color: var(--ox-text-muted);
-  font-size: 1rem;
-  margin: 0 0 10px;
+  font-size: 1.1rem;
+  margin: 0 0 12px;
   letter-spacing: 0.04em;
 }
 
 .ox-sidebar__role {
   font-family: $sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   color: var(--ox-text);
   line-height: 1.45;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .ox-sidebar__affil {
@@ -154,7 +154,7 @@ body {
 }
 
 .ox-sidebar__bio {
-  font-size: 0.86rem;
+  font-size: 0.93rem;
   color: var(--ox-text-muted);
   line-height: 1.5;
   margin: 0 0 14px;
@@ -180,10 +180,10 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 6px 10px;
+  padding: 7px 10px;
   border-radius: 6px;
   font-family: $sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   color: var(--ox-text);
   text-decoration: none;
   background-image: none !important;
@@ -269,16 +269,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.4em;
 }
 
-h1 { font-size: 1.85rem; border-bottom: none !important; padding-bottom: 0 !important; }
-h2 { font-size: 1.4rem;  }
-h3 { font-size: 1.1rem;  }
+h1 { font-size: 2rem;   border-bottom: none !important; padding-bottom: 0 !important; }
+h2 { font-size: 1.5rem;  }
+h3 { font-size: 1.18rem; }
 
 .page__content > h1 {
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 1.4rem;
-  margin-top: 2.2em;
+  font-size: 1.6rem;
+  margin-top: 2.4em;
 }
 .page__content > h1::before,
 .page__content > h1::after {
@@ -290,7 +290,7 @@ h3 { font-size: 1.1rem;  }
 }
 
 .page__content p, .page__content li {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: var(--ox-text);
 }
@@ -447,21 +447,6 @@ h3 { font-size: 1.1rem;  }
   margin-bottom: 4px;
 }
 
-/* --- Drop cap on About paragraph --------------------------------------- */
-/* The first <p> in .page__content wraps the anchor span (rendered as
-   `<p><span class="anchor" id="about-me"></span></p>`), so the bio
-   paragraph is the SECOND <p>. Verified via _site/index.html. */
-.page__content > p:nth-of-type(2)::first-letter {
-  font-family: $display;
-  font-size: 3.4em;
-  line-height: 0.85;
-  float: left;
-  color: var(--ox-primary);
-  padding: 4px 10px 0 0;
-  margin-top: 4px;
-  font-weight: 700;
-}
-
 /* --- Sidebar avatar breathing glow ------------------------------------- */
 @keyframes ox-avatar-breathe {
   0%   { box-shadow: 0 0 0 0 rgba(200, 169, 81, 0.45); }
@@ -511,9 +496,4 @@ h3 { font-size: 1.1rem;  }
   }
   .ox-sidebar__avatar { width: 110px; height: 110px; }
   .ox-sidebar__name { font-size: 1.3rem; }
-
-  .page__content > p:nth-of-type(2)::first-letter {
-    font-size: 2.4em;
-    padding-right: 8px;
-  }
 }

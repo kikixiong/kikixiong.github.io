@@ -1,0 +1,26 @@
+# Education entries — rendered as the .ox-edu card grid.
+# Each entry:
+#   dates        : "YYYY.MM – YYYY.MM" (or "Present")
+#   degree       : "MSc, Social Data Science"  (rendered Playfair, bold, Oxford Blue)
+#   institution  : "University of Oxford"      (rendered Georgia italic)
+#   honour       : optional gold chip, e.g. "First-class Honours"
+#   icon         : optional leading emoji, defaults to 🎓 in the include
+
+education:
+  - dates: "2025.10 – 2026.06"
+    degree: "MSc, Social Data Science"
+    institution: "University of Oxford"
+    honour: ""
+    icon: "🎓"
+
+  - dates: "2021.09 – 2025.06"
+    degree: "BSc, Artificial Intelligence"
+    institution: "University of Aberdeen"
+    honour: "First-class Honours"
+    icon: "🎓"
+
+  - dates: "2021.09 – 2025.06"
+    degree: "BEng, Artificial Intelligence"
+    institution: "South China Normal University"
+    honour: ""
+    icon: "🎓"

@@ -197,4 +197,83 @@
       sections.forEach(function (s) { activeObserver.observe(s); });
     });
   })();
+
+  // Scroll progress bar (top of page) — rAF-throttled
+  (function () {
+    var bar = document.querySelector('.ox-progress');
+    if (!bar) return;
+    var ticking = false;
+    function update() {
+      var doc = document.documentElement;
+      var scrollTop = window.scrollY || doc.scrollTop || 0;
+      var height = (doc.scrollHeight || document.body.scrollHeight) - (doc.clientHeight || window.innerHeight);
+      var ratio = height > 0 ? Math.min(Math.max(scrollTop / height, 0), 1) : 0;
+      bar.style.transform = 'scaleX(' + ratio + ')';
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+    window.addEventListener('resize', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+    update();
+  })();
+
+  // Back-to-top button: appear after 800px scroll, smooth-scroll to top on click
+  (function () {
+    var btn = document.querySelector('.ox-to-top');
+    if (!btn) return;
+    var ticking = false;
+    var threshold = 800;
+    function update() {
+      var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+      btn.setAttribute('data-visible', scrollTop > threshold ? 'true' : 'false');
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+    btn.addEventListener('click', function () {
+      var prefersReduced = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      try {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: prefersReduced ? 'auto' : 'smooth'
+        });
+      } catch (e) {
+        window.scrollTo(0, 0);
+      }
+    });
+    update();
+  })();
+
+  // Page-mount sweep trigger: add `js-loaded` class on body to fire CSS animation once.
+  (function () {
+    var prefersReduced = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return; // CSS also guards, but skip the class entirely.
+    function fire() {
+      // Use rAF to ensure the CSS has settled before kicking off animation.
+      window.requestAnimationFrame(function () {
+        document.body.classList.add('js-loaded');
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fire);
+    } else {
+      fire();
+    }
+  })();
 </script>
