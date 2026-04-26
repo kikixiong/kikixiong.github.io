@@ -295,31 +295,35 @@
   z-index: 2;
 }
 
-/* --- Method / topic tag chips --- */
+/* --- Method / topic tag chips ---
+   Visually distinct from the action buttons (.ox-pub__link) below:
+   - pill capsule shape vs the buttons' square border-radius
+   - soft gold tint fill + no border vs the buttons' transparent + border
+   - mixed-case label text + smaller weight — reads as a tag, not a CTA
+*/
 .ox-pub__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
-  margin: 6px 0;
+  gap: 6px;
+  margin: 4px 0 10px;
 }
 
 .ox-pub__tag {
   font-family: $sans-serif;
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ox-text-muted);
-  background: transparent;
-  border: 1px solid var(--ox-border);
-  padding: 2px 8px;
-  border-radius: $radius-sm;
-  transition: color 0.2s, border-color 0.2s;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: mix(#002147, #c8a951, 60%);
+  background: rgba(200, 169, 81, 0.14);
+  border: 0;
+  padding: 2px 10px;
+  border-radius: $radius-pill;
+  transition: color 0.2s, background 0.2s, transform 0.2s;
 }
 
 .ox-pub:hover .ox-pub__tag {
   color: var(--ox-primary);
-  border-color: rgba(200, 169, 81, 0.45);
+  background: rgba(200, 169, 81, 0.24);
 }
 
 /* --- External-link arrow (only on anchor links, not BibTeX toggle) --- */

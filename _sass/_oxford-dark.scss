@@ -145,10 +145,10 @@ html[data-theme="dark"] .ox-pub__bib-copy:hover {
 /* --- Topic tags (dark) --- */
 html[data-theme="dark"] .ox-pub__tag {
   color: $oxford-gold;
-  border-color: rgba(200, 169, 81, 0.3);
+  background: rgba(200, 169, 81, 0.12);
 }
 html[data-theme="dark"] .ox-pub:hover .ox-pub__tag {
   color: $parchment;
-  border-color: $oxford-gold;
+  background: rgba(200, 169, 81, 0.22);
 }
 

@@ -7,7 +7,7 @@
 #   icon         : optional leading emoji, defaults to 🎓 in the include
 
 education:
-  - dates: "2025.10 – 2026.06"
+  - dates: "2025.10 – 2027.05 (exp.)"
     degree: "MSc, Social Data Science"
     institution: "University of Oxford"
     honour: ""
@@ -22,5 +22,5 @@ education:
   - dates: "2021.09 – 2025.06"
     degree: "BEng, Artificial Intelligence"
     institution: "South China Normal University"
-    honour: ""
+    honour: "Outstanding Graduate"
     icon: "🎓"
