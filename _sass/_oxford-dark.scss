@@ -61,6 +61,7 @@ html[data-theme="dark"] .ox-callout {
   border-color: rgba(200, 169, 81, 0.25);
 }
 html[data-theme="dark"] .ox-callout__label { color: $oxford-gold; }
+html[data-theme="dark"] .ox-callout--seeking .ox-callout__label { color: #ff7a6c; }
 
 html[data-theme="dark"] .ox-pub:hover {
   background: var(--ox-surface);
