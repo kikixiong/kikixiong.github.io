@@ -1,5 +1,6 @@
 {%- assign pub = include.pub -%}
 {%- assign thumb = pub.thumbnail | default: "images/publications/placeholder.svg" -%}
+{%- assign bib_id = pub.title | slugify | append: '-bib' -%}
 
 <article class="ox-pub">
   <div class="ox-pub__thumb">
@@ -12,11 +13,23 @@
       {% if pub.venue_short %}<span class="ox-pub__badge">{{ pub.venue_short }}</span>{% endif %}
       <span class="ox-pub__venue-full">{{ pub.venue }}</span>
     </div>
-    {% if pub.links and pub.links.size > 0 %}
+    {% if pub.links and pub.links.size > 0 or pub.bibtex %}
     <div class="ox-pub__links">
       {% for link in pub.links %}
         <a href="{{ link.url }}" class="ox-pub__link">{{ link.name }}</a>
       {% endfor %}
+      {% if pub.bibtex %}
+        <button class="ox-pub__link ox-pub__bib-toggle"
+                type="button"
+                aria-expanded="false"
+                data-bib-toggle="{{ bib_id }}">BibTeX</button>
+      {% endif %}
+    </div>
+    {% endif %}
+    {% if pub.bibtex %}
+    <div class="ox-pub__bib" id="{{ bib_id }}" hidden>
+      <button class="ox-pub__bib-copy" type="button" data-bib-copy="{{ bib_id }}-code">Copy</button>
+      <pre><code id="{{ bib_id }}-code">{{ pub.bibtex | strip }}</code></pre>
     </div>
     {% endif %}
   </div>

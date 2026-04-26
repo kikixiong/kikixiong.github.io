@@ -1,29 +1,5 @@
 <footer class="ox-footer" role="contentinfo">
   <div class="ox-footer__inner">
-
-    <ul class="ox-footer__social">
-      {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-      {% endif %}
-      {% if site.author.googlescholar %}
-      <li><a href="{{ site.author.googlescholar }}" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a></li>
-      {% endif %}
-      {% if site.author.linkedin %}
-      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-      {% endif %}
-      {% if site.author.email %}
-      <li><a href="mailto:{{ site.author.email }}" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
-      {% endif %}
-      {% if site.author.rednote %}
-      <li><a href="https://www.xiaohongshu.com/user/profile/{{ site.author.rednote }}" aria-label="Rednote"><img src="images/xhs.png" alt="Rednote" class="ox-footer__rednote"></a></li>
-      {% endif %}
-    </ul>
-
-    <div class="ox-footer__globe">
-      <script type="text/javascript" id="clstr_globe"
-              src="//clustrmaps.com/globe.js?d=L0nOsX-e_AFql_4gtMSFDQ5XscV0ZdvYdrCibhwLUsQ"></script>
-    </div>
-
     <p class="ox-footer__copy">
       © {{ site.time | date: "%Y" }} Jiaqi Xiong · Built with Jekyll · Oxford Classic
     </p>

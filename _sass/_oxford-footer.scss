@@ -5,12 +5,12 @@
 .ox-footer {
   border-top: 1px solid var(--ox-border);
   background: var(--ox-bg);
-  padding: 32px 24px 40px;
+  padding: 28px clamp(20px, 4vw, 64px) 36px;
   margin-top: 40px;
 }
 
 .ox-footer__inner {
-  max-width: $page-max;
+  max-width: 1600px;
   margin: 0 auto;
   text-align: center;
 }

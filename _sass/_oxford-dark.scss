@@ -26,6 +26,10 @@ html[data-theme="dark"] .ox-topnav {
   border-bottom-color: var(--ox-gold);
 }
 
+html[data-theme="dark"] .ox-topnav[data-scrolled="true"] {
+  background: rgba(6, 16, 39, 0.78);
+}
+
 html[data-theme="dark"] .ox-topnav__logo { color: $parchment; }
 html[data-theme="dark"] .ox-topnav__logo:hover { color: $oxford-gold; }
 
@@ -88,4 +92,51 @@ html[data-theme="dark"] .page__content a:hover {
 html[data-theme="dark"] .page__content strong,
 html[data-theme="dark"] .page__content b {
   color: $oxford-gold;
+}
+
+/* --- Sidebar (dark) --- */
+html[data-theme="dark"] .ox-sidebar {
+  background: var(--ox-surface);
+  border-color: var(--ox-border);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+html[data-theme="dark"] .ox-sidebar__name { color: $oxford-gold; }
+html[data-theme="dark"] .ox-sidebar__zh { color: mix(#c8a951, #e8e6de, 40%); }
+html[data-theme="dark"] .ox-sidebar__role { color: #e8e6de; }
+html[data-theme="dark"] .ox-sidebar__affil { color: #9aa3b2; }
+html[data-theme="dark"] .ox-sidebar__bio { color: #9aa3b2; border-top-color: var(--ox-border); }
+html[data-theme="dark"] .ox-sidebar__social { border-top-color: var(--ox-border); }
+html[data-theme="dark"] .ox-sidebar__social a { color: #e8e6de; }
+html[data-theme="dark"] .ox-sidebar__social a i { color: $oxford-gold; }
+html[data-theme="dark"] .ox-sidebar__social a:hover {
+  background: linear-gradient(90deg, rgba(200, 169, 81, 0.16), rgba(200, 169, 81, 0.04));
+  color: $oxford-gold;
+}
+html[data-theme="dark"] .ox-sidebar__social a:hover i { color: $parchment; }
+html[data-theme="dark"] .ox-sidebar__location {
+  color: #9aa3b2;
+  border-top-color: var(--ox-border);
+}
+html[data-theme="dark"] .ox-sidebar__location i { color: $oxford-gold; }
+
+/* --- BibTeX panel (dark) --- */
+html[data-theme="dark"] .ox-pub__bib {
+  background: linear-gradient(180deg, rgba(200, 169, 81, 0.06), rgba(0, 0, 0, 0.2));
+  border-color: var(--ox-border);
+}
+html[data-theme="dark"] .ox-pub__bib code { color: #e8e6de; }
+html[data-theme="dark"] .ox-pub__bib-copy {
+  color: $oxford-gold;
+  background: var(--ox-surface);
+  border-color: var(--ox-border);
+}
+html[data-theme="dark"] .ox-pub__bib-copy:hover {
+  background: $oxford-gold;
+  color: $oxford-blue-deep;
+  border-color: $oxford-gold;
+}
+
+/* --- Drop cap on About paragraph (dark) --- */
+html[data-theme="dark"] .page__content > p:nth-of-type(2)::first-letter {
+  color: var(--ox-gold);
 }

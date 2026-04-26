@@ -126,7 +126,7 @@ defaults:
       type: pages
     values:
       layout: default
-      author_profile: false
+      author_profile: true
 
 
 # Sass/SCSS

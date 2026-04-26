@@ -1,0 +1,26 @@
+# News timeline entries — newest first.
+# Each entry: date (YYYY-MM string), emoji (defaults to 🎉), text.
+
+- date: "2026-02"
+  emoji: "🎉"
+  text: "One paper accepted to CVPR 2026."
+
+- date: "2025-11"
+  emoji: "🎉"
+  text: "One paper accepted to NeurIPS 2025 workshop."
+
+- date: "2025-10"
+  emoji: "🎉"
+  text: "Joined the University of Oxford as a master student."
+
+- date: "2025-06"
+  emoji: "🎉"
+  text: "Obtained bachelor's degree from University of Aberdeen and South China Normal University."
+
+- date: "2025-06"
+  emoji: "🎉"
+  text: "One paper accepted to BMC Bioinformatics."
+
+- date: "2025-01"
+  emoji: "🎉"
+  text: "One paper accepted to the 33rd Conference on Intelligent Systems for Molecular Biology."

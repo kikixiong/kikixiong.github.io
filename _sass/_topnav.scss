@@ -10,13 +10,22 @@
   border-bottom: 1px solid var(--ox-gold);
   z-index: 100;
   box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+  transition: background 0.25s ease-out, box-shadow 0.25s ease-out, backdrop-filter 0.25s ease-out;
+}
+
+.ox-topnav[data-scrolled="true"] {
+  background: rgba(0, 33, 71, 0.82);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  box-shadow: 0 4px 18px rgba(0, 33, 71, 0.22);
 }
 
 .ox-topnav__inner {
-  max-width: 1040px;
+  max-width: 1600px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 clamp(20px, 4vw, 64px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,6 +88,16 @@
   color: $parchment;
 }
 .ox-topnav__links a:hover::after { transform: scaleX(1); }
+
+/* Active section indicator (set by IntersectionObserver in scripts.html) */
+.ox-topnav__links a[data-active="true"] {
+  color: $parchment;
+}
+.ox-topnav__links a[data-active="true"]::after {
+  transform: scaleX(1);
+  background: var(--ox-gold);
+  height: 1.5px;
+}
 
 /* --- Mobile hamburger --------------------------------------------------- */
 .ox-topnav__burger {

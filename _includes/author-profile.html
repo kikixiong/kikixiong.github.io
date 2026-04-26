@@ -1,5 +1,67 @@
-{%- comment -%}
-  Deprecated by Oxford Classic redesign.
-  Content moved to _includes/about-header.html and _includes/footer.html.
-  Left as an empty stub so any stale includes do not break the build.
-{%- endcomment -%}
+{% assign gs_url = "https://raw.githubusercontent.com/" | append: site.repository | append: "/google-scholar-stats/gs_data_shieldsio.json" %}
+{% if site.google_scholar_stats_use_cdn %}
+  {% assign gs_url = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@google-scholar-stats/gs_data_shieldsio.json" %}
+{% endif %}
+
+<div class="ox-sidebar" itemscope itemtype="http://schema.org/Person">
+  <img class="ox-sidebar__avatar"
+       src="{{ site.author.avatar }}"
+       alt="{{ site.author.name }}"
+       itemprop="image">
+
+  <h2 class="ox-sidebar__name" itemprop="name">{{ site.author.name }}</h2>
+  <p class="ox-sidebar__zh" lang="zh">熊嘉琪</p>
+
+  <p class="ox-sidebar__role">
+    MSc Social Data Science<br>
+    <span class="ox-sidebar__affil">Oxford Internet Institute</span>
+  </p>
+
+  <div class="ox-sidebar__citations">
+    <img src="https://img.shields.io/endpoint?url={{ gs_url | uri_escape }}&style=flat-square&labelColor=002147&color=c8a951&label=Scholar citations"
+         alt="Google Scholar citations">
+  </div>
+
+  {% if site.author.bio %}
+  <p class="ox-sidebar__bio">{{ site.author.bio }}</p>
+  {% endif %}
+
+  <ul class="ox-sidebar__social">
+    {% if site.author.github %}
+      <li><a href="https://github.com/{{ site.author.github }}" aria-label="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i><span>GitHub</span>
+      </a></li>
+    {% endif %}
+    {% if site.author.googlescholar %}
+      <li><a href="{{ site.author.googlescholar }}" aria-label="Google Scholar">
+        <i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Google Scholar</span>
+      </a></li>
+    {% endif %}
+    {% if site.author.linkedin %}
+      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" aria-label="LinkedIn">
+        <i class="fab fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+      </a></li>
+    {% endif %}
+    {% if site.author.email %}
+      <li><a href="mailto:{{ site.author.email }}" aria-label="Email">
+        <i class="fas fa-envelope" aria-hidden="true"></i><span>Email</span>
+      </a></li>
+    {% endif %}
+    {% if site.author.rednote %}
+      <li><a href="https://www.xiaohongshu.com/user/profile/{{ site.author.rednote }}" aria-label="Rednote">
+        <img src="images/xhs.png" alt="" class="ox-sidebar__rednote-icon"><span>Rednote</span>
+      </a></li>
+    {% endif %}
+  </ul>
+
+  <div class="ox-sidebar__globe" aria-label="Visitor map">
+    <script type="text/javascript" id="clstr_globe"
+            src="//clustrmaps.com/globe.js?d=L0nOsX-e_AFql_4gtMSFDQ5XscV0ZdvYdrCibhwLUsQ"></script>
+  </div>
+
+  {% if site.author.location %}
+  <p class="ox-sidebar__location">
+    <i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ site.author.location }}
+  </p>
+  {% endif %}
+</div>
