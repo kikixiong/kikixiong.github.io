@@ -309,20 +309,24 @@ h3 { font-size: 1.18rem; }
 }
 
 /* --- Links -------------------------------------------------------------- */
+/* Always show a soft gold underline so links read as links statically,
+   then deepen on hover. Buttons that opt out (e.g. .ox-pub__link, sidebar
+   social icons) override `background-image: none !important` themselves. */
 .page__content a {
   color: var(--ox-link);
   text-decoration: none;
-  background-image: linear-gradient(var(--ox-gold), var(--ox-gold));
-  background-size: 0% 1px;
+  background-image: linear-gradient(rgba(200, 169, 81, 0.55), rgba(200, 169, 81, 0.55));
+  background-size: 100% 1px;
   background-repeat: no-repeat;
   background-position: 0 100%;
-  transition: background-size 0.28s ease-out, color 0.2s ease-out;
+  transition: background-size 0.25s ease-out, background-image 0.25s ease-out, color 0.2s ease-out;
   padding-bottom: 1px;
 }
 
 .page__content a:hover {
-  background-size: 100% 1px;
   color: var(--ox-link-hover);
+  background-image: linear-gradient(var(--ox-gold), var(--ox-gold));
+  background-size: 100% 2px;
 }
 
 /* --- About header block (avatar + name + GS badge) ---------------------- */
