@@ -3,72 +3,44 @@ permalink: /
 title: ""
 excerpt: ""
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
-
 <span class='anchor' id='about-me'></span>
 
-Hi! I am Jiaqi Xiong (熊嘉琪)
+Hi! I am Jiaqi Xiong (熊嘉琪). I am a Master student in [Social Data Science](https://www.oii.ox.ac.uk/people/profiles/jiaqi-xiong/) at the [Oxford Internet Institute](https://www.oii.ox.ac.uk/), University of Oxford. I obtained my dual bachelor's degree in Artificial Intelligence from the University of Aberdeen (with first-degree honours) and South China Normal University (SCNU) in 2025, where I completed my thesis under the supervision of [Chris Norval](http://cnorval.com/). My research focuses on applying <mark class="ox-mark">**graph neural networks (GNNs)**</mark> to biological / social sciences and sports analytics, and on building <mark class="ox-mark">**trustworthy agentic AI systems**</mark> and <mark class="ox-mark">embodied AI</mark>.
 
-I am a Master student in [Social Data Science](https://www.oii.ox.ac.uk/people/profiles/jiaqi-xiong/) at the [Oxford Internet Institute](https://www.oii.ox.ac.uk/), University of Oxford. I obtained my dual bachelor's degree in Artificial Intelligence from the University of Aberdeen (with first-degree honours) and South China Normal University (SCNU) in 2025, where I completed my thesis under supervision of [Chris Norval](http://cnorval.com/). My research focuses on applying **graph neural networks (GNNs)** to the biological/social sciences and sports analytics, building **trustworthy Agentic AI systems** and embodied AI.
+{% include research-chips.html %}
 
-<span style="color:red">**🙋 I am actively seeking PhD positions for Fall 2026 and RA/intern position for 2026 summer! If you are interested in me, please contact me!**</span>
+{% include seeking-callout.html %}
 
 
 # 🔥 News
-- *2026.02*: &nbsp;🎉 One paper accepted to CVPR 2026. 
-- *2025.11*: &nbsp;🎉 One paper accepted to NeurIPS 2025 workshop.
-- *2025.10*: &nbsp;🎉 Joined the University of Oxford as a master student.
-- *2025.06*: &nbsp;🎉 Obtain bachelor's degree from University of Aberdeen and South China Normal University.
-- *2025.06*: &nbsp;🎉 One paper accepted to BMC Bioinfomatics. 
-- *2025.01*: &nbsp;🎉 One paper accepted to 33th conference on Intelligent Systems for Molecular Biology.
+
+{% include news-timeline.html %}
 
 
-# 📖 Educations
-- *2025.10 - 2026.06*, Master of Science in Social Data Science, University of Oxford. 
-- *2021.09 - 2025.06*, Bachelor of Science in Artificial Intelligence, University of Aberdeen.
-- *2021.09 - 2025.06*, Bachelor of Engineering in Artificial Intelligence, South China Normal University.
+# 📖 Education
 
-# 📝 Publications 
-
-- Psychometrically Grounded Evaluation of LLM Personas \
-**Jiaqi Xiong** \
-PersonaLLM Workshop @ NeurIPS 2025
+{% include education-cards.html %}
 
 
-- Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution \
-**Jiaqi Xiong\***, Nan Yin\*, Shiyang Liang\*, Haoyang Li, Yingxu Wang, Duo Ai, Fang Pan, Jingjie Wang \
-BMC Bioinformatics, [Paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-025-06186-1) [code](https://github.com/kikixiong/XATGRN)
+# 📝 Publications
 
-- MutBERT: Probabilistic Genome Representation Improves Genomics Foundation Models \
-Weicai Long, Houcheng Su, **Jiaqi Xiong**, Yanlin Zhang \
-ISMB 2025 [paper](https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1)
-
-- PillarTrack: Boosting Pillar Representation for Transformer-based 3D Single Object Tracking on Point Clouds\
-Weisheng Xu\*, Sifan Zhou\*, **Jiaqi Xiong**, Ziyu Zhao, Zhihang Yuan\
-Preprint [paper](https://arxiv.org/pdf/2404.07495?)
+{% include publications-list.html %}
 
 
-# 🎖 Honors and Award
-**🏅Honors and Scholarship**
-- *2025.06* Honorary Scholarship for Undergraduate Graduates, Aberdeen Institute of South China Normal University.
-- *2025.03* First Prize, Innovation Award Scholarship, South China Normal University.
-- *2025.01* First Prize, Outstanding Student Scholarship, South China Normal University.
+# 🎖 Honors and Awards
+
+{% include honors-grid.html %}
 
 
-**🏆Competition Awards**
-- *2025.04* Silver Prize, China International College Students' Innovation Competition 2025.
-- *2024.08* Third Prize, National Final of China Robotics and Artificial Intelligence Competition.
-- *2024.07* First Prize, Guangdong College Computer Design Competition.
-- *2024.07* FIrst Prize, Network Technology Challenge of China Collegiate Computing Competition.
+# 📬 Contact
 
+<span class='anchor' id='-contact'></span>
 
+Reach me at **[{{ site.author.email }}](mailto:{{ site.author.email }})**, or find me on [GitHub](https://github.com/{{ site.author.github }}) · [Google Scholar]({{ site.author.googlescholar }}) · [LinkedIn](https://www.linkedin.com/in/{{ site.author.linkedin }}).
+
+Based in Oxford, UK. Open to research collaboration and chats.

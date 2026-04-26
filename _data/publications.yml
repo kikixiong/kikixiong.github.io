@@ -1,0 +1,140 @@
+publications:
+  - title: "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models"
+    authors: "**Jiaqi Xiong**, Yunjia Qi, Qi Cao, Yu Zheng, Yutong Zhang, Ziteng Wang, Ruofan Liao, Weisheng Xu, Sichen Liu"
+    venue: "Preprint"
+    venue_short: "Preprint"
+    date: "2026-03"
+    thumbnail: "images/publications/DEAF.png"
+    first_author: true
+    tags: ["Audio", "Benchmark", "MLLM"]
+    links:
+      - { name: "Paper", url: "https://arxiv.org/abs/2603.18048" }
+    bibtex: |
+      @article{xiong2026deaf,
+        title         = {{DEAF}: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models},
+        author        = {Xiong, Jiaqi and Qi, Yunjia and Cao, Qi and Zheng, Yu and Zhang, Yutong and Wang, Ziteng and Liao, Ruofan and Xu, Weisheng and Liu, Sichen},
+        year          = {2026},
+        eprint        = {2603.18048},
+        archivePrefix = {arXiv},
+        primaryClass  = {cs.AI}
+      }
+
+  - title: "Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control"
+    authors: "Weisheng Xu, Qiwei Wu, Jiaxi Zhang, Tan Jing, Yangfan Li, Yuetong Fang, **Jiaqi Xiong**, Kai Wu, Rong Ou, Renjing Xu"
+    venue: "CVPR 2026"
+    venue_short: "CVPR '26"
+    date: "2026-02"
+    thumbnail: "images/publications/CLAIMS.png"
+    tags: ["Humanoid", "Motion", "Robotics"]
+    links:
+      - { name: "Paper", url: "https://arxiv.org/abs/2602.21599" }
+    bibtex: |
+      @inproceedings{xu2026iterative,
+        title         = {Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control},
+        author        = {Xu, Weisheng and Wu, Qiwei and Zhang, Jiaxi and Jing, Tan and Li, Yangfan and Fang, Yuetong and Xiong, Jiaqi and Wu, Kai and Ou, Rong and Xu, Renjing},
+        booktitle     = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+        year          = {2026},
+        eprint        = {2602.21599},
+        archivePrefix = {arXiv},
+        primaryClass  = {cs.RO}
+      }
+
+  - title: "V-FAT: Benchmarking Visual Fidelity Against Text-bias"
+    authors: "Ziteng Wang, Yujie He, Guanliang Li, Siqi Yang, **Jiaqi Xiong**, Songxiang Liu"
+    venue: "Preprint"
+    venue_short: "Preprint"
+    date: "2026-01"
+    thumbnail: "images/publications/V-FAT.png"
+    tags: ["Vision-Language", "Benchmark", "MLLM"]
+    links:
+      - { name: "Paper", url: "https://arxiv.org/abs/2601.04897" }
+    bibtex: |
+      @article{wang2026vfat,
+        title         = {{V-FAT}: Benchmarking Visual Fidelity Against Text-bias},
+        author        = {Wang, Ziteng and He, Yujie and Li, Guanliang and Yang, Siqi and Xiong, Jiaqi and Liu, Songxiang},
+        year          = {2026},
+        eprint        = {2601.04897},
+        archivePrefix = {arXiv},
+        primaryClass  = {cs.CL}
+      }
+
+  - title: "Psychometrically Grounded Evaluation of LLM Personas"
+    authors: "**Jiaqi Xiong**"
+    venue: "First Workshop on LLM Persona Modeling @ NeurIPS 2025"
+    venue_short: "NeurIPS '25"
+    date: "2025-11"
+    thumbnail: ""
+    first_author: true
+    tags: ["LLM", "Evaluation", "Persona"]
+    links:
+      - { name: "Paper",      url: "https://openreview.net/forum?id=j1jDozwwmx" }
+      - { name: "NeurIPS",    url: "https://neurips.cc/virtual/2025/loc/mexico-city/129930" }
+    bibtex: |
+      @inproceedings{xiong2025psychometrically,
+        title     = {Psychometrically Grounded Evaluation of {LLM} Personas},
+        author    = {Xiong, Jiaqi},
+        booktitle = {First Workshop on {LLM} Persona Modeling at the Conference on Neural Information Processing Systems (NeurIPS)},
+        year      = {2025},
+        url       = {https://openreview.net/forum?id=j1jDozwwmx}
+      }
+
+  - title: "Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution"
+    authors: "**Jiaqi Xiong\\***, Nan Yin\\*, Shiyang Liang\\*, Haoyang Li, Yingxu Wang, Duo Ai, Jingjie Wang"
+    venue: "BMC Bioinformatics, vol. 26 (2025)"
+    venue_short: "BMC Bioinf."
+    date: "2025-06"
+    thumbnail: "images/publications/XATGRN.png"
+    first_author: true
+    tags: ["GNN", "Bioinformatics", "Genomics"]
+    links:
+      - { name: "Paper", url: "https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-025-06186-1" }
+      - { name: "Code",  url: "https://github.com/kikixiong/XATGRN" }
+    bibtex: |
+      @article{xiong2025crossattention,
+        title     = {Cross-Attention Graph Neural Networks for Inferring Gene Regulatory Networks with Skewed Degree Distribution},
+        author    = {Xiong, Jiaqi and Yin, Nan and Liang, Shiyang and Li, Haoyang and Wang, Yingxu and Ai, Duo and Wang, Jingjie},
+        journal   = {BMC Bioinformatics},
+        volume    = {26},
+        number    = {1},
+        year      = {2025},
+        publisher = {Springer Nature},
+        doi       = {10.1186/s12859-025-06186-1}
+      }
+
+  - title: "MutBERT: Probabilistic Genome Representation Improves Genomics Foundation Models"
+    authors: "Weicai Long, Houcheng Su, **Jiaqi Xiong**, Yanlin Zhang"
+    venue: "bioRxiv (Accepted at ISMB 2025)"
+    venue_short: "ISMB '25"
+    date: "2025-01"
+    thumbnail: "images/MutBERT.png"
+    tags: ["Genomics", "Foundation Model", "BERT"]
+    links:
+      - { name: "Paper", url: "https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1" }
+    bibtex: |
+      @article{long2025mutbert,
+        title   = {{MutBERT}: Probabilistic Genome Representation Improves Genomics Foundation Models},
+        author  = {Long, Weicai and Su, Houcheng and Xiong, Jiaqi and Zhang, Yanlin},
+        journal = {bioRxiv},
+        year    = {2025},
+        doi     = {10.1101/2025.01.23.634452},
+        note    = {Accepted at ISMB 2025}
+      }
+
+  - title: "PillarTrack: Boosting Pillar Representation for Transformer-based 3D Single Object Tracking on Point Clouds"
+    authors: "Weisheng Xu\\*, Sifan Zhou\\*, **Jiaqi Xiong**, Ziyu Zhao, Zhihang Yuan"
+    venue: "Preprint"
+    venue_short: "Preprint"
+    date: "2024-04"
+    thumbnail: "images/publications/PillarTrack.png"
+    tags: ["3D Tracking", "Point Cloud", "Transformer"]
+    links:
+      - { name: "Paper", url: "https://arxiv.org/abs/2404.07495" }
+    bibtex: |
+      @article{xu2024pillartrack,
+        title         = {{PillarTrack}: Boosting Pillar Representation for Transformer-based {3D} Single Object Tracking on Point Clouds},
+        author        = {Xu, Weisheng and Zhou, Sifan and Xiong, Jiaqi and Zhao, Ziyu and Yuan, Zhihang},
+        year          = {2024},
+        eprint        = {2404.07495},
+        archivePrefix = {arXiv},
+        primaryClass  = {cs.CV}
+      }

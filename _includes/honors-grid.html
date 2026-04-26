@@ -1,0 +1,40 @@
+{%- comment -%}
+  Honors & Awards card grid.
+  Reads from _data/honors.yml. Two subsections: scholarship + competition.
+  Each card mirrors .ox-pub interaction (gold left bar slides in on hover).
+{%- endcomment -%}
+
+{%- assign scholarships = site.data.honors.honors | where: "category", "scholarship" -%}
+{%- assign competitions = site.data.honors.honors | where: "category", "competition" -%}
+
+<div class="ox-honors-section">
+  <h3 class="ox-honors__heading">🏅 Honors and Scholarship</h3>
+  <ul class="ox-honors">
+    {%- for item in scholarships -%}
+      <li class="ox-honors__card">
+        <span class="ox-honors__chip" aria-label="Date awarded">{{ item.date }}</span>
+        <span class="ox-honors__emoji" aria-hidden="true">{{ item.emoji }}</span>
+        <div class="ox-honors__body">
+          <h4 class="ox-honors__title">{{ item.title }}</h4>
+          <p class="ox-honors__institution">{{ item.institution }}</p>
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+<div class="ox-honors-section">
+  <h3 class="ox-honors__heading">🏆 Competition Awards</h3>
+  <ul class="ox-honors">
+    {%- for item in competitions -%}
+      <li class="ox-honors__card">
+        <span class="ox-honors__chip" aria-label="Date awarded">{{ item.date }}</span>
+        <span class="ox-honors__emoji" aria-hidden="true">{{ item.emoji }}</span>
+        <div class="ox-honors__body">
+          <h4 class="ox-honors__title">{{ item.title }}</h4>
+          <p class="ox-honors__institution">{{ item.institution }}</p>
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>

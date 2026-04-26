@@ -1,0 +1,54 @@
+# Honors and Awards — structured for the .ox-honors card grid.
+# Each entry:
+#   date         : "YYYY.MM"  -> rendered as a gold uppercase chip
+#   emoji        : leading badge emoji (🥇 🥈 🥉 🏅 🏆 etc.)
+#   title        : main award name (rendered bold, Oxford Blue)
+#   institution  : awarding body (rendered Inter italic, muted)
+#   category     : "scholarship" | "competition" — drives section grouping
+#
+# Sections are rendered in the order declared in _includes/honors-grid.html.
+
+honors:
+  # --- Honors and Scholarship ---------------------------------------------
+  - date: "2025.06"
+    emoji: "🏅"
+    title: "Honorary Scholarship for Undergraduate Graduates"
+    institution: "Aberdeen Institute of South China Normal University"
+    category: scholarship
+
+  - date: "2025.03"
+    emoji: "🏅"
+    title: "First Prize, Innovation Award Scholarship"
+    institution: "South China Normal University"
+    category: scholarship
+
+  - date: "2025.01"
+    emoji: "🏅"
+    title: "First Prize, Outstanding Student Scholarship"
+    institution: "South China Normal University"
+    category: scholarship
+
+  # --- Competition Awards -------------------------------------------------
+  - date: "2025.04"
+    emoji: "🥈"
+    title: "Silver Prize"
+    institution: "China International College Students' Innovation Competition 2025"
+    category: competition
+
+  - date: "2024.08"
+    emoji: "🥉"
+    title: "Third Prize"
+    institution: "National Final of China Robotics and Artificial Intelligence Competition"
+    category: competition
+
+  - date: "2024.07"
+    emoji: "🥇"
+    title: "First Prize"
+    institution: "Guangdong College Computer Design Competition"
+    category: competition
+
+  - date: "2024.07"
+    emoji: "🥇"
+    title: "First Prize"
+    institution: "Network Technology Challenge of China Collegiate Computing Competition"
+    category: competition
