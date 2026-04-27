@@ -6,7 +6,7 @@ publications:
     date: "2026-03"
     thumbnail: "images/publications/DEAF.png"
     first_author: true
-    tags: ["Audio", "Benchmark", "MLLM"]
+    tags: ["Multimodal", "Benchmark", "MLLM"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2603.18048" }
     bibtex: |
@@ -45,7 +45,7 @@ publications:
     venue_short: "Preprint"
     date: "2026-01"
     thumbnail: "images/publications/V-FAT.png"
-    tags: ["Vision-Language", "Benchmark", "MLLM"]
+    tags: ["Multimodal", "Benchmark", "MLLM"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2601.04897" }
     bibtex: |
