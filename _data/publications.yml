@@ -1,4 +1,26 @@
 publications:
+  - title: "CrediBench: Building Web-Scale Network Datasets for Information Integrity"
+    authors: "Emma Kondrup, Sebastian Sabry, Hussein Abdallah, Zachary Yang, **Jiaqi Xiong**, Kellin Pelrine, James Zhou, Zhijin Guo, Michael M. Bronstein, Jean-François Godbout, Reihaneh Rabbany, Shenyang Huang"
+    venue: "KDD 2026 Datasets and Benchmarks Track"
+    venue_short: "KDD '26"
+    date: "2026-06"
+    thumbnail: "images/publications/CrediBench.png"
+    tags: ["Temporal Graph", "Misinformation", "Benchmark"]
+    links:
+      - { name: "Paper",   url: "https://arxiv.org/abs/2509.23340" }
+      - { name: "Code",    url: "https://github.com/ekmpa/CrediGraph" }
+      - { name: "Dataset", url: "https://huggingface.co/datasets/credi-net/CrediBench" }
+    bibtex: |
+      @inproceedings{kondrup2026credibench,
+        title         = {{CrediBench}: Building Web-Scale Network Datasets for Information Integrity},
+        author        = {Kondrup, Emma and Sabry, Sebastian and Abdallah, Hussein and Yang, Zachary and Xiong, Jiaqi and Pelrine, Kellin and Zhou, James and Guo, Zhijin and Bronstein, Michael M. and Godbout, Jean-François and Rabbany, Reihaneh and Huang, Shenyang},
+        booktitle     = {Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+        year          = {2026},
+        eprint        = {2509.23340},
+        archivePrefix = {arXiv},
+        primaryClass  = {cs.SI}
+      }
+
   - title: "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models"
     authors: "**Jiaqi Xiong**, Yunjia Qi, Qi Cao, Yu Zheng, Yutong Zhang, Ziteng Wang, Ruofan Liao, Weisheng Xu, Sichen Liu"
     venue: "Preprint"
