@@ -37,6 +37,11 @@ Hi! I am Jiaqi Xiong (熊嘉琪). I am a Master student in [Social Data Science]
 {% include honors-grid.html %}
 
 
+# 🤝 Academic Service
+
+- Reviewer, [ICML 2026 Workshop on Graph Foundation Models: A New Era for Graph Machine Learning (GFM)](https://openreview.net/group?id=ICML.cc/2026/Workshop/GFM)
+
+
 # 📬 Contact
 
 <span class='anchor' id='-contact'></span>
