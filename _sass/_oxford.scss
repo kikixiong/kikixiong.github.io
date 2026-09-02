@@ -222,7 +222,7 @@ body {
   transform: scale(1.12);
 }
 
-/* --- Sidebar ClustrMaps globe ----------------------------------------- */
+/* --- Sidebar visitor globe -------------------------------------------- */
 .ox-sidebar__globe {
   width: 100%;
   padding: 14px 0 6px;
@@ -236,7 +236,7 @@ body {
   overflow: visible;
 }
 .ox-sidebar__globe:hover { opacity: 1; }
-/* Let ClustrMaps render at its native 200x200 — scaling a canvas via CSS
+/* Let the globe render at its native size — scaling a canvas via CSS
    blurs it. Only constrain to never exceed the sidebar. */
 .ox-sidebar__globe > * {
   max-width: 100%;
