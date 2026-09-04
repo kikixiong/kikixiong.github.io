@@ -222,7 +222,7 @@ body {
   transform: scale(1.12);
 }
 
-/* --- Sidebar visitor globe -------------------------------------------- */
+/* --- Sidebar visitor map ---------------------------------------------- */
 .ox-sidebar__globe {
   width: 100%;
   padding: 14px 0 6px;
@@ -236,13 +236,7 @@ body {
   overflow: visible;
 }
 .ox-sidebar__globe:hover { opacity: 1; }
-/* MapMyVisitors hides the globe until its entire container enters the
-   viewport. A tall sticky sidebar can never satisfy that condition. */
-.ox-sidebar__globe .mmvst_inner {
-  display: block;
-}
-/* Let the globe render at its native size — scaling a canvas via CSS
-   blurs it. Only constrain to never exceed the sidebar. */
+/* Keep the visitor widget within the sidebar at its native proportions. */
 .ox-sidebar__globe > * {
   max-width: 100%;
   height: auto;
