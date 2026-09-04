@@ -236,6 +236,11 @@ body {
   overflow: visible;
 }
 .ox-sidebar__globe:hover { opacity: 1; }
+/* MapMyVisitors hides the globe until its entire container enters the
+   viewport. A tall sticky sidebar can never satisfy that condition. */
+.ox-sidebar__globe .mmvst_inner {
+  display: block;
+}
 /* Let the globe render at its native size — scaling a canvas via CSS
    blurs it. Only constrain to never exceed the sidebar. */
 .ox-sidebar__globe > * {
