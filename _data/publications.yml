@@ -88,7 +88,7 @@ publications:
     venue: "AACL-IJCNLP 2026 (Accepted)"
     venue_short: "AACL-IJCNLP '26"
     date: "2026-02"
-    thumbnail: "images/publications/placeholder.svg"
+    thumbnail: "images/publications/T2MBench.png"
     tags: ["Text-to-Motion", "Benchmark", "Generalization"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2602.13751" }
