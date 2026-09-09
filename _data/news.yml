@@ -1,6 +1,9 @@
 # News timeline entries — newest first.
 # Each entry: date (YYYY-MM string), text (markdown allowed; **bold** for venues).
 
+- date: "2026-09"
+  text: "Two papers (T2MBench and DEAF) accepted to **AACL-IJCNLP 2026**."
+
 - date: "2026-05"
   text: "One paper accepted to **KDD 2026** (D&B Track)."
 

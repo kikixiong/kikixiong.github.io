@@ -44,8 +44,8 @@ publications:
 
   - title: "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models"
     authors: "**Jiaqi Xiong**, Yunjia Qi, Qi Cao, Yu Zheng, Yutong Zhang, Ziteng Wang, Ruofan Liao, Weisheng Xu, Sichen Liu"
-    venue: "Preprint"
-    venue_short: "Preprint"
+    venue: "AACL-IJCNLP 2026 (Accepted)"
+    venue_short: "AACL-IJCNLP '26"
     date: "2026-03"
     thumbnail: "images/publications/DEAF.png"
     first_author: true
@@ -57,6 +57,7 @@ publications:
         title         = {{DEAF}: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models},
         author        = {Xiong, Jiaqi and Qi, Yunjia and Cao, Qi and Zheng, Yu and Zhang, Yutong and Wang, Ziteng and Liao, Ruofan and Xu, Weisheng and Liu, Sichen},
         year          = {2026},
+        note          = {Accepted at AACL-IJCNLP 2026},
         eprint        = {2603.18048},
         archivePrefix = {arXiv},
         primaryClass  = {cs.AI}
@@ -80,6 +81,27 @@ publications:
         eprint        = {2602.21599},
         archivePrefix = {arXiv},
         primaryClass  = {cs.RO}
+      }
+
+  - title: "T2MBench: A Benchmark for Out-of-Distribution Text-to-Motion Generation"
+    authors: "Bin Yang, Rong Ou, Weisheng Xu, **Jiaqi Xiong**, Xintao Li, Taowen Wang, Luyu Zhu, Xu Jiang, Jing Tan, Renjing Xu"
+    venue: "AACL-IJCNLP 2026 (Accepted)"
+    venue_short: "AACL-IJCNLP '26"
+    date: "2026-02"
+    thumbnail: "images/publications/placeholder.svg"
+    tags: ["Text-to-Motion", "Benchmark", "Generalization"]
+    links:
+      - { name: "Paper", url: "https://arxiv.org/abs/2602.13751" }
+    bibtex: |
+      @misc{yang2026t2mbench,
+        title         = {{T2MBench}: A Benchmark for Out-of-Distribution Text-to-Motion Generation},
+        author        = {Yang, Bin and Ou, Rong and Xu, Weisheng and Xiong, Jiaqi and Li, Xintao and Wang, Taowen and Zhu, Luyu and Jiang, Xu and Tan, Jing and Xu, Renjing},
+        year          = {2026},
+        note          = {Accepted at AACL-IJCNLP 2026},
+        eprint        = {2602.13751},
+        archivePrefix = {arXiv},
+        primaryClass  = {cs.CV},
+        url           = {https://arxiv.org/abs/2602.13751}
       }
 
   - title: "V-FAT: Benchmarking Visual Fidelity Against Text-bias"
