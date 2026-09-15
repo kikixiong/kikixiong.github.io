@@ -187,18 +187,20 @@ publications:
 
   - title: "PillarTrack: Boosting Pillar Representation for Transformer-based 3D Single Object Tracking on Point Clouds"
     authors: "Weisheng Xu\\*, Sifan Zhou\\*, **Jiaqi Xiong**, Ziyu Zhao, Zhihang Yuan"
-    venue: "Preprint"
-    venue_short: "Preprint"
-    date: "2024-04"
+    venue: "Knowledge-Based Systems (Accepted)"
+    venue_short: "KBS '26"
+    date: "2026-09"
     thumbnail: "images/publications/PillarTrack.png"
     tags: ["3D Tracking", "Point Cloud", "Transformer"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2404.07495" }
     bibtex: |
-      @article{xu2024pillartrack,
+      @article{xu2026pillartrack,
         title         = {{PillarTrack}: Boosting Pillar Representation for Transformer-based {3D} Single Object Tracking on Point Clouds},
         author        = {Xu, Weisheng and Zhou, Sifan and Xiong, Jiaqi and Zhao, Ziyu and Yuan, Zhihang},
-        year          = {2024},
+        journal       = {Knowledge-Based Systems},
+        year          = {2026},
+        note          = {Accepted},
         eprint        = {2404.07495},
         archivePrefix = {arXiv},
         primaryClass  = {cs.CV}
