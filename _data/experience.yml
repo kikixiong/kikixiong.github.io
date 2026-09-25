@@ -19,3 +19,10 @@
   role: "Research Assistant"
   supervisor: "Prof. Michael Bronstein"
   supervisor_url: "https://www.cs.ox.ac.uk/people/michael.bronstein/"
+
+- dates: "Jul 2024 – Sep 2024"
+  institution: "HKUST (Guangzhou)"
+  logo: "/images/institutions/hkust-gz.png"
+  role: "Research Intern"
+  supervisor: "Prof. Yanlin Zhang"
+  supervisor_url: "https://zhyanlin.github.io/"
