@@ -10,7 +10,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi! I am Jiaqi Xiong (熊嘉琪). I am a Master student in [Social Data Science](https://www.oii.ox.ac.uk/people/profiles/jiaqi-xiong/) at the [Oxford Internet Institute](https://www.oii.ox.ac.uk/), University of Oxford, where I am fortunate to be supervised by [Prof. Xiaowen Dong](https://web.media.mit.edu/~xdong/) and [Prof. Michael Bronstein](https://www.cs.ox.ac.uk/people/michael.bronstein/), and to work closely with [Dr. Andy Huang](https://shenyanghuang.github.io/). Additionally, I work as a research assistant with [Prof. Enyan Dai](https://enyandai.github.io/) at the [Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn/). Before Oxford, I obtained my dual bachelor's degree in Artificial Intelligence from the University of Aberdeen (with first-class honours) and South China Normal University (SCNU) in 2025, where I completed my thesis under the supervision of [Dr. Chris Norval](http://cnorval.com/) and [Dr. Huan Yang](https://www.scholat.com/hyang8851.en). My research focuses on applying <mark class="ox-mark" markdown="span">**graph neural networks (GNNs)**</mark> to biological / social sciences and sports analytics, and on building <mark class="ox-mark" markdown="span">**trustworthy agentic AI systems**</mark> and <mark class="ox-mark" markdown="span">**multimodal AI**</mark>.
+Hi! I am Jiaqi Xiong (熊嘉琪). I am a Master student in [Social Data Science](https://www.oii.ox.ac.uk/people/profiles/jiaqi-xiong/) at the [Oxford Internet Institute](https://www.oii.ox.ac.uk/), University of Oxford, where I am fortunate to be supervised by [Prof. Xiaowen Dong](https://web.media.mit.edu/~xdong/) and [Prof. Michael Bronstein](https://www.cs.ox.ac.uk/people/michael.bronstein/), and to work closely with [Dr. Andy Huang](https://shenyanghuang.github.io/). Additionally, I work as a research assistant with [Prof. Enyan Dai](https://enyandai.github.io/) at the [Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn/). Before Oxford, I obtained my dual bachelor's degree in Artificial Intelligence from the University of Aberdeen (with first-class honours) and South China Normal University (SCNU) in 2025, where I completed my thesis under the supervision of [Dr. Chris Norval](http://cnorval.com/) and [Dr. Huan Yang](https://www.scholat.com/hyang8851.en). My research interests include <mark class="ox-mark" markdown="span">**self-evolving agents**</mark>, <mark class="ox-mark" markdown="span">**agentic scientific discovery**</mark>, and <mark class="ox-mark" markdown="span">**biological foundation models**</mark>.
 
 {% include research-chips.html %}
 
@@ -19,7 +19,8 @@ Hi! I am Jiaqi Xiong (熊嘉琪). I am a Master student in [Social Data Science]
 
 # 🔥 News
 
-{% include news-timeline.html %}
+{% capture news_content %}{% include news-timeline.html %}{% endcapture %}
+{% include scroll-panel.html content=news_content kind="news" label="News" count=site.data.news.size unit="updates" %}
 
 
 # 📖 Education
@@ -27,9 +28,16 @@ Hi! I am Jiaqi Xiong (熊嘉琪). I am a Master student in [Social Data Science]
 {% include education-cards.html %}
 
 
+# 💼 Work & Research Experience
+
+{% capture experience_content %}{% include experience-timeline.html %}{% endcapture %}
+{% include scroll-panel.html content=experience_content kind="experience" label="Work and research experience" count=site.data.experience.size unit="experiences" %}
+
+
 # 📝 Publications
 
-{% include publications-list.html %}
+{% capture publications_content %}{% include publications-list.html %}{% endcapture %}
+{% include scroll-panel.html content=publications_content kind="publications" label="Publications" count=site.data.publications.publications.size unit="publications" %}
 
 
 # 🎖 Honors and Awards

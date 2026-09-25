@@ -1,26 +1,21 @@
-# Education entries — rendered as the .ox-edu card grid.
-# Each entry:
-#   dates        : "YYYY.MM – YYYY.MM" (or "Present")
-#   degree       : "MSc, Social Data Science"  (rendered Playfair, bold, Oxford Blue)
-#   institution  : "University of Oxford"      (rendered Georgia italic)
-#   honour       : optional gold chip, e.g. "First-class Honours"
-#   icon         : optional leading emoji, defaults to 🎓 in the include
+# Education timeline, newest first. Matching dates share one milestone
+# so the concurrent undergraduate degrees appear as a dual-degree programme.
 
 education:
-  - dates: "2025.10 – 2027.05 (exp.)"
+  - dates: "Oct 2025 – May 2027 (expected)"
     degree: "MSc, Social Data Science"
     institution: "University of Oxford"
+    logo: "/images/ox.jpg"
     honour: ""
-    icon: "🎓"
 
-  - dates: "2021.09 – 2025.06"
+  - dates: "Sep 2021 – Jun 2025"
     degree: "BSc, Artificial Intelligence"
     institution: "University of Aberdeen"
+    logo: "/images/institutions/aberdeen.png"
     honour: "First-class Honours"
-    icon: "🎓"
 
-  - dates: "2021.09 – 2025.06"
+  - dates: "Sep 2021 – Jun 2025"
     degree: "BEng, Artificial Intelligence"
     institution: "South China Normal University"
+    logo: "/images/institutions/scnu.gif"
     honour: "Outstanding Graduate"
-    icon: "🎓"

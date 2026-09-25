@@ -1,0 +1,9 @@
+<div class="ox-panel">
+  <div class="ox-panel__summary">
+    <span>{{ include.count }} {{ include.unit }}</span>
+    <span aria-hidden="true">Scroll to explore ↓</span>
+  </div>
+  <div class="ox-scroll ox-scroll--{{ include.kind }}" role="region" aria-label="{{ include.label | escape }}" tabindex="0">
+    {{ include.content }}
+  </div>
+</div>

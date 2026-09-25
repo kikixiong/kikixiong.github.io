@@ -1,0 +1,201 @@
+/* Bounded reading areas keep long lists from overwhelming the homepage. */
+.ox-panel {
+  margin-top: 1.2em;
+  border: 1px solid var(--ox-border);
+  border-radius: 10px;
+  background: var(--ox-surface);
+  overflow: hidden;
+}
+
+.ox-panel__summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 18px;
+  border-bottom: 1px solid var(--ox-border);
+  color: var(--ox-text-muted);
+  font-family: $sans-serif;
+  font-size: 0.75rem;
+}
+
+.ox-scroll {
+  max-height: 30rem;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ox-text-muted) var(--ox-surface);
+  padding: 16px 18px;
+
+  &:focus-visible {
+    outline: 2px solid var(--ox-primary);
+    outline-offset: -3px;
+  }
+
+  &::-webkit-scrollbar { width: 8px; }
+  &::-webkit-scrollbar-track { background: var(--ox-surface); }
+  &::-webkit-scrollbar-thumb {
+    background: var(--ox-text-muted);
+    border: 2px solid var(--ox-surface);
+    border-radius: 8px;
+  }
+
+  > .ox-timeline,
+  > .ox-pub-list,
+  > .ox-roadmap { margin: 0; }
+}
+
+.ox-scroll--news { max-height: 18rem; }
+.ox-scroll--experience { max-height: 20rem; }
+.ox-scroll--publications { max-height: min(44rem, 75vh); }
+.ox-scroll .ox-pub { flex-shrink: 0; }
+
+/* Dates sit beside a continuous gold route; concurrent degrees share a stop. */
+.ox-roadmap {
+  list-style: none;
+  padding: 0;
+  margin: 1.2em 0 0;
+}
+
+.ox-roadmap__step {
+  display: grid;
+  grid-template-columns: 155px minmax(0, 1fr);
+  column-gap: 28px;
+  margin: 0;
+}
+
+.ox-roadmap__date {
+  padding: 2px 0 26px;
+  color: var(--ox-text-muted);
+  font-family: $sans-serif;
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+.ox-roadmap__body {
+  position: relative;
+  min-width: 0;
+  border-left: 1px solid var(--ox-gold);
+  padding: 0 0 28px 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    border: 2px solid var(--ox-gold);
+    border-radius: 50%;
+    background: var(--ox-surface);
+  }
+}
+
+.ox-roadmap__step:first-child .ox-roadmap__body::before {
+  background: var(--ox-gold);
+}
+
+.ox-roadmap__step:last-child .ox-roadmap__body {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.ox-roadmap__step:last-child .ox-roadmap__date { padding-bottom: 0; }
+.ox-roadmap__qualification + .ox-roadmap__qualification { margin-top: 18px; }
+
+.ox-institution {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+}
+
+.ox-institution__info { min-width: 0; }
+.ox-roadmap--experience .ox-institution { align-items: center; }
+
+.ox-institution__badge {
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  padding: 3px;
+  object-fit: scale-down;
+  background: #fff;
+  border: 1px solid var(--ox-border);
+  border-radius: 8px;
+}
+
+.ox-roadmap .ox-roadmap__title {
+  margin: 0 0 4px;
+  color: var(--ox-primary);
+  font-family: $display;
+  font-size: 1.12rem;
+  line-height: 1.4;
+}
+
+.ox-roadmap .ox-roadmap__type {
+  margin: 0 0 5px;
+  font-family: $sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ox-text-muted);
+}
+
+.ox-roadmap .ox-roadmap__detail {
+  margin: 0;
+  color: var(--ox-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ox-roadmap .ox-roadmap__role {
+  margin: 0 0 3px;
+  font-family: $sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ox-text);
+}
+
+.ox-roadmap__honour {
+  display: inline-block;
+  margin-top: 7px;
+  padding: 2px 8px;
+  border: 1px solid var(--ox-gold);
+  border-radius: 4px;
+  font-family: $sans-serif;
+  font-size: 0.68rem;
+  color: var(--ox-primary);
+}
+
+@include breakpoint(max-width 880px) {
+  .ox-roadmap__step {
+    grid-template-columns: minmax(0, 1fr);
+    margin-left: 5px;
+    padding: 0 0 24px 22px;
+    border-left: 1px solid var(--ox-gold);
+    position: relative;
+  }
+  .ox-roadmap__step:last-child {
+    padding-bottom: 0;
+    border-left-color: transparent;
+  }
+  .ox-roadmap__date { padding: 0 0 8px; }
+  .ox-roadmap__body,
+  .ox-roadmap__step:last-child .ox-roadmap__body {
+    position: static;
+    border: 0;
+    padding: 0;
+  }
+}
+
+@include breakpoint(max-width $small) {
+  .ox-panel__summary { padding: 10px 12px; gap: 8px; }
+  .ox-scroll { padding: 14px 12px; }
+  .ox-scroll--publications { max-height: 70vh; }
+}
+
+@media print {
+  .ox-panel { overflow: visible; border: 0; }
+  .ox-panel__summary { display: none; }
+  .ox-scroll { max-height: none; overflow: visible; padding: 0; }
+  .ox-roadmap__step { break-inside: avoid; }
+}

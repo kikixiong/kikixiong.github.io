@@ -1,4 +1,4 @@
-{%- assign items = site.data.news | sort: 'date' | reverse -%}
+{%- assign items = site.data.news -%}
 <ol class="ox-timeline">
   {%- for item in items -%}
     <li class="ox-timeline__item">

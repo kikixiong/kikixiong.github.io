@@ -1,0 +1,21 @@
+# Roles, institutions, and supervisors; newest first, without project details.
+- dates: "Jun 2026 – Present"
+  institution: "HKUST (Guangzhou)"
+  logo: "/images/institutions/hkust-gz.png"
+  role: "Research Assistant"
+  supervisor: "Prof. Enyan Dai"
+  supervisor_url: "https://enyandai.github.io/"
+
+- dates: "Apr 2026 – Jun 2026"
+  institution: "Computer Network Information Center, Chinese Academy of Sciences"
+  logo: "/images/institutions/cnic.ico"
+  role: "Research Intern"
+  supervisor: "Dr. Jiaxin Qi"
+  supervisor_url: "https://simpleshinobu.github.io/"
+
+- dates: "Oct 2025 – Feb 2026"
+  institution: "University of Oxford"
+  logo: "/images/ox.jpg"
+  role: "Research Assistant"
+  supervisor: "Prof. Michael Bronstein"
+  supervisor_url: "https://www.cs.ox.ac.uk/people/michael.bronstein/"

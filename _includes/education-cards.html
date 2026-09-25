@@ -1,20 +1,25 @@
-{%- comment -%}
-  Education cards — 3-card responsive grid (auto-fit, minmax).
-  Reads from _data/education.yml.
-  Visual family with .ox-pub: gold left bar on hover, lift, surface bg.
-{%- endcomment -%}
-
-<ul class="ox-edu">
-  {%- for item in site.data.education.education -%}
-    {%- assign icon = item.icon | default: "🎓" -%}
-    <li class="ox-edu__card">
-      <span class="ox-edu__icon" aria-hidden="true">{{ icon }}</span>
-      <time class="ox-edu__dates">{{ item.dates }}</time>
-      <h3 class="ox-edu__degree">{{ item.degree }}</h3>
-      <p class="ox-edu__institution">{{ item.institution }}</p>
-      {%- if item.honour and item.honour != "" -%}
-        <span class="ox-edu__honour">{{ item.honour }}</span>
-      {%- endif -%}
+{%- assign stages = site.data.education.education | group_by: "dates" -%}
+<ol class="ox-roadmap ox-roadmap--education" aria-label="Education timeline">
+  {%- for stage in stages -%}
+    <li class="ox-roadmap__step">
+      <div class="ox-roadmap__date">{{ stage.name }}</div>
+      <div class="ox-roadmap__body">
+        {%- if stage.items.size > 1 -%}
+          <p class="ox-roadmap__type">Dual-degree programme</p>
+        {%- endif -%}
+        {%- for item in stage.items -%}
+          <div class="ox-roadmap__qualification ox-institution">
+            <img class="ox-institution__badge" src="{{ item.logo | relative_url }}" alt="" width="52" height="52" loading="lazy" decoding="async">
+            <div class="ox-institution__info">
+              <h3 class="ox-roadmap__title">{{ item.institution }}</h3>
+              <p class="ox-roadmap__detail">{{ item.degree }}</p>
+              {%- if item.honour and item.honour != "" -%}
+                <span class="ox-roadmap__honour">{{ item.honour }}</span>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
     </li>
   {%- endfor -%}
-</ul>
+</ol>
