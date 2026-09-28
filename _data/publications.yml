@@ -1,4 +1,14 @@
 publications:
+  # Metadata: https://github.com/FaterYU/FaterYU.github.io/commit/681a12a78606a364e20451915d630eda0d375a46
+  # The latest entry supersedes OccSTeP; reuse its existing overview image.
+  - title: "OccStress: Stress-Testing the 4D Occupancy Forecasting Chain"
+    authors: "Y. Zheng, J. Hu, **J. Xiong**, R. Liu, J. Zheng, K. Yang, J. Zhang"
+    venue: "NeurIPS 2026 (Accepted)"
+    venue_short: "NeurIPS '26"
+    date: "2026-09"
+    thumbnail: "images/publications/occstep-overview.png"
+    thumbnail_fit: "contain"
+
   - title: "Beyond Gene Reconstruction: Learning Cell Representations through Complementary Transcriptomic Views"
     authors: "**Jiaqi Xiong\\***, Yuntao Hu\\*, Yu Zheng, Yifei Shi, Xinyue Guo, Jiaxin Qi"
     venue: "Preprint"

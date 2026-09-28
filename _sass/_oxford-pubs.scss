@@ -77,6 +77,18 @@
   filter: brightness(1.04) saturate(1.08);
 }
 
+.ox-pub__thumb--contain {
+  background: #fff;
+}
+
+.ox-pub__thumb--contain img {
+  object-fit: contain;
+}
+
+.ox-pub:hover .ox-pub__thumb--contain img {
+  transform: none;
+}
+
 /* Subtle sheen that sweeps across thumbnail on hover */
 .ox-pub__thumb::after {
   content: "";

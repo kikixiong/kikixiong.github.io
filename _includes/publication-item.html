@@ -3,7 +3,7 @@
 {%- assign bib_id = pub.title | slugify | append: '-bib' -%}
 
 <article class="ox-pub">
-  <div class="ox-pub__thumb">
+  <div class="ox-pub__thumb{% if pub.thumbnail_fit == 'contain' %} ox-pub__thumb--contain{% endif %}">
     <img src="{{ thumb }}" alt="{{ pub.title | escape }}" loading="lazy">
     {% if pub.first_author %}<span class="ox-pub__first">★ First author</span>{% endif %}
   </div>
