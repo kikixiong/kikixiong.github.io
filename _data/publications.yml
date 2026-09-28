@@ -7,7 +7,6 @@ publications:
     venue_short: "NeurIPS '26"
     date: "2026-09"
     thumbnail: "images/publications/occstep-overview.png"
-    thumbnail_fit: "contain"
 
   - title: "Beyond Gene Reconstruction: Learning Cell Representations through Complementary Transcriptomic Views"
     authors: "**Jiaqi Xiong\\***, Yuntao Hu\\*, Yu Zheng, Yifei Shi, Xinyue Guo, Jiaxin Qi"
