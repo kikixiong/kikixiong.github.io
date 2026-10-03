@@ -58,6 +58,12 @@ redirect_from:
 - Reviewer, [ICML 2026 Workshop on Graph Foundation Models: A New Era for Graph Machine Learning (GFM)](https://openreview.net/group?id=ICML.cc/2026/Workshop/GFM)
 
 
+# ✍️ Blogs
+{: #blogs }
+
+**TBD** — This space will focus on some interesting things. Coming soon.
+
+
 # 📬 Contact
 
 <span class='anchor' id='-contact'></span>
