@@ -8,16 +8,17 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   width: 100%;
-  background: var(--ox-gold);
+  background: linear-gradient(90deg, #25436b 0%, #b58c3f 55%, #efd58f 100%);
   transform: scaleX(0);
   transform-origin: left center;
   z-index: 101; /* sits above .ox-topnav (100) */
   pointer-events: none;
   will-change: transform;
   /* Tiny smoothing — keeps tracking responsive on rAF updates */
-  transition: transform 0.05s linear;
+  transition: transform 0.08s linear;
+  box-shadow: 0 1px 5px rgba(200, 169, 81, 0.24);
 }
 
 /* --- 2) Back-to-top button ------------------------------------------------- */
@@ -81,7 +82,7 @@
 
 /* --- Dark-mode overrides --------------------------------------------------- */
 html[data-theme="dark"] .ox-progress {
-  background: var(--ox-gold);
+  background: linear-gradient(90deg, #486c9c 0%, #c8a951 55%, #f4dfae 100%);
 }
 
 html[data-theme="dark"] .ox-to-top {

@@ -30,6 +30,8 @@
   margin-top: 1.6em;
 }
 
+.ox-honors-section { container-type: inline-size; }
+
 .ox-honors__heading {
   font-family: $display;
   font-size: 1.05rem;
@@ -138,6 +140,11 @@
   margin: 0;
 }
 
+/* Preserve readable card widths when a tablet still has the profile sidebar. */
+@container (max-width: 640px) {
+  .ox-honors { grid-template-columns: 1fr; }
+}
+
 /* --------------------------------------------------------------------------
    Mobile — collapse honors to single column.
    -------------------------------------------------------------------------- */
@@ -145,7 +152,25 @@
   .ox-honors {
     grid-template-columns: 1fr;
   }
-  .ox-honors__body { padding-right: 70px; }
+  .ox-honors__card {
+    grid-template-columns: 24px minmax(0, 1fr);
+    column-gap: 10px;
+    row-gap: 3px;
+  }
+  .ox-honors__chip {
+    position: static;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .ox-honors__emoji {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+  .ox-honors__body {
+    grid-column: 2;
+    grid-row: 2;
+    padding-right: 0;
+  }
 }
 
 /* ==========================================================================

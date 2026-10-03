@@ -12,52 +12,33 @@
     <span class="ox-sidebar__affil">Oxford Internet Institute</span>
   </p>
 
-  {% if site.author.bio %}
-  <p class="ox-sidebar__bio">{{ site.author.bio }}</p>
-  {% endif %}
-
   <ul class="ox-sidebar__social">
     {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}" aria-label="GitHub">
+      <li><a href="https://github.com/{{ site.author.github }}" aria-label="GitHub" title="GitHub">
         <i class="fab fa-github" aria-hidden="true"></i><span>GitHub</span>
       </a></li>
     {% endif %}
     {% if site.author.googlescholar %}
-      <li><a href="{{ site.author.googlescholar }}" aria-label="Google Scholar">
+      <li><a href="{{ site.author.googlescholar }}" aria-label="Google Scholar" title="Google Scholar">
         <i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Google Scholar</span>
       </a></li>
     {% endif %}
     {% if site.author.linkedin %}
-      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" aria-label="LinkedIn">
+      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" aria-label="LinkedIn" title="LinkedIn">
         <i class="fab fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
       </a></li>
     {% endif %}
     {% if site.author.email %}
-      <li><a href="mailto:{{ site.author.email }}" aria-label="Email">
+      <li><a href="mailto:{{ site.author.email }}" aria-label="Email" title="Email">
         <i class="fas fa-envelope" aria-hidden="true"></i><span>Email</span>
       </a></li>
     {% endif %}
     {% if site.author.rednote %}
-      <li><a href="https://www.xiaohongshu.com/user/profile/{{ site.author.rednote }}" aria-label="Rednote">
+      <li><a href="https://www.xiaohongshu.com/user/profile/{{ site.author.rednote }}" aria-label="Rednote" title="Rednote">
         <img src="images/xhs.png" alt="" class="ox-sidebar__rednote-icon"><span>Rednote</span>
       </a></li>
     {% endif %}
   </ul>
-
-  <div class="ox-sidebar__globe" aria-label="Visitor map">
-    <!-- Previous ClustrMaps widget kept for easy rollback.
-    <script type="text/javascript" id="clstr_globe"
-            src="//clustrmaps.com/globe.js?d=L0nOsX-e_AFql_4gtMSFDQ5XscV0ZdvYdrCibhwLUsQ"></script>
-    -->
-    <script type="text/javascript" id="mapmyvisitors"
-            src="//mapmyvisitors.com/map.js?d=O_6X2preCQj05zmdhgbVDqlC2tbeZTJrqgH6jcYvkWQ&amp;cl=ffffff&amp;w=a"></script>
-    <noscript>
-      <a href="https://mapmyvisitors.com/web/1c7q8" title="Visit tracker">
-        <img src="https://mapmyvisitors.com/map.png?d=O_6X2preCQj05zmdhgbVDqlC2tbeZTJrqgH6jcYvkWQ&amp;cl=ffffff"
-             alt="Visitor map">
-      </a>
-    </noscript>
-  </div>
 
   {% if site.author.location %}
   <p class="ox-sidebar__location">

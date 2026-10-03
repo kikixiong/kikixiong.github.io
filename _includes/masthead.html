@@ -1,12 +1,15 @@
 <header class="ox-topnav" role="banner">
   <div class="ox-topnav__inner">
-    <a href="#about-me" class="ox-topnav__logo">J. Xiong</a>
+    <a href="/#about-me" class="ox-topnav__logo" aria-label="Jiaqi Xiong, back to introduction">
+      <span class="ox-topnav__monogram" aria-hidden="true">JX</span>
+      <span>Jiaqi Xiong</span>
+    </a>
 
     <nav class="ox-topnav__nav" aria-label="Primary">
-      <button class="ox-topnav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <button class="ox-topnav__burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="ox-topnav-links">
         <span></span><span></span><span></span>
       </button>
-      <ul class="ox-topnav__links">
+      <ul class="ox-topnav__links" id="ox-topnav-links">
         {% for link in site.data.navigation.main %}
           <li><a href="{{ link.url }}">{{ link.title }}</a></li>
         {% endfor %}

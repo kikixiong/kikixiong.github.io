@@ -33,17 +33,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Two-column grid: sticky sidebar + fluid content — all fluid via clamp() */
+/* One centered reading column; wide viewports add space at both sides. */
 #main {
-  max-width: 1600px !important;
+  max-width: 1000px !important;
   width: 100% !important;
   margin: 0 auto !important;
-  padding: 32px clamp(20px, 4vw, 64px) 56px !important;
+  padding: 32px clamp(16px, 3vw, 32px) 56px !important;
   animation: none;
-  display: grid;
-  grid-template-columns: clamp(240px, 18vw, 300px) minmax(0, 1fr);
-  gap: clamp(32px, 4.5vw, 80px);
-  align-items: start;
+  display: block;
 }
 
 /* All content blocks share the same width — no per-element measure */
@@ -65,25 +62,7 @@ body {
 
 #page-body { padding-top: $topnav-height; }
 
-/* --- Oxford Sidebar ---------------------------------------------------- */
-.sidebar {
-  display: block !important;
-  width: auto !important;
-  float: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  opacity: 1 !important;
-  font-size: 1rem !important;
-
-  &.sticky {
-    position: sticky;
-    top: calc(#{$topnav-height} + 20px);
-    height: fit-content;
-    max-height: none;
-    overflow: visible;
-  }
-}
-
+/* --- About profile card ------------------------------------------------ */
 .ox-sidebar {
   display: flex;
   flex-direction: column;
@@ -222,26 +201,6 @@ body {
   transform: scale(1.12);
 }
 
-/* --- Sidebar visitor map ---------------------------------------------- */
-.ox-sidebar__globe {
-  width: 100%;
-  padding: 14px 0 6px;
-  margin-top: 10px;
-  border-top: 1px dashed var(--ox-border);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.92;
-  transition: opacity 0.25s ease-out;
-  overflow: visible;
-}
-.ox-sidebar__globe:hover { opacity: 1; }
-/* Keep the visitor widget within the sidebar at its native proportions. */
-.ox-sidebar__globe > * {
-  max-width: 100%;
-  height: auto;
-}
-
 .ox-sidebar__location {
   font-family: $sans-serif;
   font-size: 0.78rem;
@@ -273,19 +232,21 @@ h2 { font-size: 1.5rem;  }
 h3 { font-size: 1.18rem; }
 
 .page__content > h1 {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  display: block;
   font-size: 1.6rem;
-  margin-top: 2.4em;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  scroll-margin-top: 88px;
 }
-.page__content > h1::before,
+.page__content > h1::before { display: none; }
 .page__content > h1::after {
   content: "";
-  flex: 1;
-  height: 1px;
+  display: block;
+  width: 46px;
+  height: 2px;
+  margin-top: 10px;
   background: var(--ox-gold);
-  opacity: 0.65;
+  opacity: 0.8;
 }
 
 .page__content p, .page__content li {
@@ -327,6 +288,35 @@ h3 { font-size: 1.18rem; }
   background-image: linear-gradient(var(--ox-gold), var(--ox-gold));
   background-size: 100% 2px;
 }
+
+.page__content a:focus-visible,
+.page__content button:focus-visible,
+.ox-sidebar a:focus-visible {
+  outline: 2px solid var(--ox-gold);
+  outline-offset: 3px;
+}
+
+/* The profile now lives inside page content; keep its compact card styles. */
+.page__content .ox-sidebar__zh {
+  color: var(--ox-text-muted);
+  font-size: 1.1rem;
+}
+.page__content .ox-sidebar__role {
+  color: var(--ox-text);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+.page__content .ox-sidebar__location {
+  color: var(--ox-text-muted);
+  font-size: 0.78rem;
+}
+.page__content .ox-sidebar__social li { margin: 0; }
+.page__content .ox-sidebar__social a {
+  color: var(--ox-text);
+  padding: 7px 10px;
+  background-image: none !important;
+}
+.page__content .ox-sidebar__social a:hover { color: var(--ox-primary); }
 
 /* --- About header block (avatar + name + GS badge) ---------------------- */
 .ox-about-header {
@@ -455,53 +445,55 @@ h3 { font-size: 1.18rem; }
   color: #c1372b;
 }
 
-/* --- Sidebar avatar breathing glow ------------------------------------- */
-@keyframes ox-avatar-breathe {
-  0%   { box-shadow: 0 0 0 0 rgba(200, 169, 81, 0.45); }
-  70%  { box-shadow: 0 0 0 12px rgba(200, 169, 81, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(200, 169, 81, 0); }
-}
-
-.ox-sidebar__avatar {
-  animation: ox-avatar-breathe 3.6s ease-out infinite;
-}
-
-.ox-sidebar__avatar:hover {
-  animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ox-sidebar__avatar {
-    animation: none;
-  }
-}
-
-/* --- Tablet: keep two columns but shrink sidebar -------------------- */
+/* --- Tablet: keep the profile card compact ---------------------------- */
 @include breakpoint(max-width 880px) {
-  #main {
-    grid-template-columns: 200px minmax(0, 1fr) !important;
-    gap: 28px !important;
-  }
   .ox-sidebar__avatar { width: 120px; height: 120px; }
   .ox-sidebar__name { font-size: 1.25rem; }
-  .ox-sidebar__globe { min-height: auto; }
 }
 
-/* --- Mobile: only collapse to single column on phones --------------- */
-@include breakpoint(max-width $small) {
-  html { font-size: 14.5px; }
+/* --- Mobile ----------------------------------------------------------- */
+@include breakpoint(max-width 760px) {
+  html { font-size: 16px; }
 
   #main {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
     padding: 20px 16px 40px !important;
   }
-  .sidebar.sticky { position: static !important; }
   .ox-sidebar {
-    max-width: 420px;
-    margin: 0 auto;
-    padding: 16px 12px;
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr);
+    align-items: center;
+    gap: 0 16px;
+    text-align: left;
+    max-width: none;
+    padding: 14px 16px 10px;
   }
-  .ox-sidebar__avatar { width: 110px; height: 110px; }
-  .ox-sidebar__name { font-size: 1.3rem; }
+  .ox-sidebar__avatar {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+  }
+  .ox-sidebar__name { grid-column: 2; margin: 0; font-size: 1.25rem; }
+  .page__content .ox-sidebar__zh { grid-column: 2; margin: 0; font-size: 0.9rem; }
+  .page__content .ox-sidebar__role { grid-column: 2; margin: 0; font-size: 0.78rem; }
+  .ox-sidebar__bio,
+  .ox-sidebar__location { display: none; }
+  .ox-sidebar__social {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 12px;
+    padding: 9px 0 0;
+  }
+  .page__content .ox-sidebar__social a {
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+  .ox-sidebar__social a span { display: none; }
+  .ox-sidebar__social a:hover { transform: none; }
 }

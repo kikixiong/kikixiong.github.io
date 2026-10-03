@@ -5,7 +5,7 @@
    black-on-white CV-like printout. Hides screen-only chrome (topnav,
    progress bar, toggles, BibTeX panels, footer globe, dark-mode toggle),
    forces the light theme regardless of [data-theme], collapses the
-   two-column sidebar layout into a single-column flow, and shows external
+   About profile layout into a single-column flow, and shows external
    URLs inline so the page is useful on paper.
    Wrapped entirely in @media print so screen rendering is untouched.
    ========================================================================== */
@@ -57,8 +57,7 @@
   .ox-topnav,
   .ox-progress,
   .ox-to-top,
-  .ox-mount-veil,
-  .ox-footer__globe,
+  .ox-footer__map,
   .ox-theme-toggle,
   .ox-darkmode-toggle,
   [data-theme-toggle],
@@ -81,6 +80,8 @@
   .ox-shell,
   .ox-main,
   .ox-content,
+  #main,
+  .ox-intro-layout,
   .layout--single,
   .page__inner-wrap,
   .archive {

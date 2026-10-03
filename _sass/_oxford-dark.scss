@@ -63,9 +63,10 @@ html[data-theme="dark"] .ox-callout {
 html[data-theme="dark"] .ox-callout__label { color: $oxford-gold; }
 html[data-theme="dark"] .ox-callout--seeking .ox-callout__label { color: #ff7a6c; }
 
-html[data-theme="dark"] .ox-pub:hover {
+html[data-theme="dark"] .ox-pub:hover,
+html[data-theme="dark"] .ox-pub:focus-within {
   background: var(--ox-surface);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.24);
 }
 html[data-theme="dark"] .ox-pub__thumb img { border-color: var(--ox-border); }
 html[data-theme="dark"] .ox-pub__badge {
@@ -151,4 +152,3 @@ html[data-theme="dark"] .ox-pub:hover .ox-pub__tag {
   color: $parchment;
   background: rgba(200, 169, 81, 0.22);
 }
-

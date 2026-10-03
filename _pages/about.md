@@ -2,19 +2,26 @@
 permalink: /
 title: ""
 excerpt: ""
-author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-<span class='anchor' id='about-me'></span>
+<div class="ox-intro-layout" id="about-me">
+  <aside class="ox-intro-layout__profile" aria-label="Profile">
+    {% include author-profile.html %}
+  </aside>
+  <div class="ox-intro-layout__body">
+    <section class="ox-intro" aria-labelledby="about-heading">
+      <h1 class="ox-intro__title" id="about-heading">About me</h1>
+      <p>I am a master's student in <a href="https://www.oii.ox.ac.uk/people/profiles/jiaqi-xiong/">Social Data Science</a> at the <a href="https://www.oii.ox.ac.uk/">Oxford Internet Institute</a>, University of Oxford. I am supervised by <a href="https://web.media.mit.edu/~xdong/">Prof. Xiaowen Dong</a> and <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Prof. Michael Bronstein</a>, and work closely with <a href="https://shenyanghuang.github.io/">Dr. Andy Huang</a>. I also work as a research assistant with <a href="https://enyandai.github.io/">Prof. Enyan Dai</a> at the <a href="https://www.hkust-gz.edu.cn/">Hong Kong University of Science and Technology (Guangzhou)</a>.</p>
+      <p>Before Oxford, I earned a dual bachelor's degree in Artificial Intelligence from the University of Aberdeen (with first-class honours) and South China Normal University in 2025. I completed my thesis under the supervision of <a href="http://cnorval.com/">Dr. Chris Norval</a> and <a href="https://www.scholat.com/hyang8851.en">Dr. Huan Yang</a>.</p>
+      <p class="ox-intro__interests"><strong>Research interests:</strong> self-evolving agents, agentic scientific discovery, and biological foundation models.</p>
+    </section>
 
-Hi! I am Jiaqi Xiong (熊嘉琪). I am a Master student in [Social Data Science](https://www.oii.ox.ac.uk/people/profiles/jiaqi-xiong/) at the [Oxford Internet Institute](https://www.oii.ox.ac.uk/), University of Oxford, where I am fortunate to be supervised by [Prof. Xiaowen Dong](https://web.media.mit.edu/~xdong/) and [Prof. Michael Bronstein](https://www.cs.ox.ac.uk/people/michael.bronstein/), and to work closely with [Dr. Andy Huang](https://shenyanghuang.github.io/). Additionally, I work as a research assistant with [Prof. Enyan Dai](https://enyandai.github.io/) at the [Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn/). Before Oxford, I obtained my dual bachelor's degree in Artificial Intelligence from the University of Aberdeen (with first-class honours) and South China Normal University (SCNU) in 2025, where I completed my thesis under the supervision of [Dr. Chris Norval](http://cnorval.com/) and [Dr. Huan Yang](https://www.scholat.com/hyang8851.en). My research interests include <mark class="ox-mark" markdown="span">**self-evolving agents**</mark>, <mark class="ox-mark" markdown="span">**agentic scientific discovery**</mark>, and <mark class="ox-mark" markdown="span">**biological foundation models**</mark>.
-
-{% include research-chips.html %}
-
-{% include seeking-callout.html %}
+    {% include seeking-callout.html %}
+  </div>
+</div>
 
 
 # 🔥 News

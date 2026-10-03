@@ -1,4 +1,56 @@
-/* Bounded reading areas keep long lists from overwhelming the homepage. */
+/* The profile uses only the space beside About; the rest reads in one column. */
+.ox-intro-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 32px;
+  align-items: start;
+}
+
+.ox-intro-layout__profile { grid-column: 2; grid-row: 1; }
+.ox-intro-layout__body { grid-column: 1; grid-row: 1; min-width: 0; }
+
+.page__content #about-me {
+  margin: 0 0 24px;
+  scroll-margin-top: 88px;
+}
+
+.page__content #about-me::before { display: none; }
+
+.page__content .ox-intro__title {
+  margin: 0 0 20px;
+  padding: 0 0 12px;
+  border-bottom: 1px solid var(--ox-border);
+  color: var(--ox-primary);
+  font-family: $display;
+  font-size: clamp(1.75rem, 2.6vw, 2.35rem);
+  line-height: 1.2;
+}
+
+.page__content .ox-intro p {
+  max-width: 75ch;
+  margin: 0 0 0.9em;
+  line-height: 1.73;
+}
+
+.page__content .ox-intro__interests {
+  margin-bottom: 0;
+  color: var(--ox-text-muted);
+  font-size: 0.95rem;
+}
+
+.ox-intro__interests strong { color: var(--ox-primary); }
+
+@include breakpoint(max-width 760px) {
+  .ox-intro-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .ox-intro-layout__profile,
+  .ox-intro-layout__body { width: 100%; }
+}
+
+/* Bounded reading areas keep longer lists available without lengthening the page. */
 .ox-panel {
   margin-top: 1.2em;
   border: 1px solid var(--ox-border);
@@ -11,14 +63,14 @@
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  padding: 10px 18px;
+  padding: 11px 18px;
   border-bottom: 1px solid var(--ox-border);
   color: var(--ox-text-muted);
   font-family: $sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.82rem;
 }
 
-.ox-scroll {
+.ox-panel__content {
   max-height: 30rem;
   overflow-y: auto;
   scrollbar-gutter: stable;
@@ -44,10 +96,9 @@
   > .ox-roadmap { margin: 0; }
 }
 
-.ox-scroll--news { max-height: 18rem; }
-.ox-scroll--experience { max-height: 20rem; }
-.ox-scroll--publications { max-height: min(44rem, 75vh); }
-.ox-scroll .ox-pub { flex-shrink: 0; }
+.ox-panel__content--news { max-height: 18rem; }
+.ox-panel__content--experience { max-height: 20rem; }
+.ox-panel__content--publications { max-height: min(44rem, 75vh); }
 
 /* Dates sit beside a continuous gold route; concurrent degrees share a stop. */
 .ox-roadmap {
@@ -187,15 +238,17 @@
   }
 }
 
-@include breakpoint(max-width $small) {
+@include breakpoint(max-width 760px) {
   .ox-panel__summary { padding: 10px 12px; gap: 8px; }
-  .ox-scroll { padding: 14px 12px; }
-  .ox-scroll--publications { max-height: 70vh; }
+  .ox-panel__content {
+    max-height: min(32rem, 60vh);
+    padding: 14px 12px;
+  }
 }
 
 @media print {
   .ox-panel { overflow: visible; border: 0; }
   .ox-panel__summary { display: none; }
-  .ox-scroll { max-height: none; overflow: visible; padding: 0; }
+  .ox-panel__content { max-height: none; overflow: visible; padding: 0; }
   .ox-roadmap__step { break-inside: avoid; }
 }

@@ -10,16 +10,12 @@ layout: compress
   </head>
 
   <body>
-    <div class="ox-mount-veil" aria-hidden="true"></div>
-
     {% include browser-upgrade.html %}
     <div class="ox-progress" aria-hidden="true"></div>
     {% include masthead.html %}
 
     <div id="page-body">
       <div id="main" role="main">
-        {% include sidebar.html %}
-
         <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
           {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
           <div class="page__inner-wrap">

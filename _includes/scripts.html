@@ -9,10 +9,30 @@
     var burger = document.querySelector('.ox-topnav__burger');
     var nav    = document.querySelector('.ox-topnav');
     if (!burger || !nav) return;
+    function closeMenu() {
+      nav.setAttribute('data-open', 'false');
+      burger.setAttribute('aria-expanded', 'false');
+    }
     burger.addEventListener('click', function () {
       var open = nav.getAttribute('data-open') === 'true';
       nav.setAttribute('data-open', !open);
       burger.setAttribute('aria-expanded', !open);
+    });
+    nav.querySelectorAll('.ox-topnav__links a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+    var logo = nav.querySelector('.ox-topnav__logo');
+    if (logo) logo.addEventListener('click', closeMenu);
+    var themeToggle = nav.querySelector('[data-theme-toggle]');
+    if (themeToggle) themeToggle.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.getAttribute('data-open') === 'true') {
+        closeMenu();
+        burger.focus();
+      }
+    });
+    document.addEventListener('click', function (e) {
+      if (nav.getAttribute('data-open') === 'true' && !nav.contains(e.target)) closeMenu();
     });
   })();
 
@@ -88,10 +108,8 @@
     }
   })();
 
-  // Scroll reveal + active-nav indicator (IntersectionObserver)
+  // Scroll reveal and section-aware navigation
   (function () {
-    if (!('IntersectionObserver' in window)) return;
-
     var prefersReduced = window.matchMedia &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -108,8 +126,7 @@
       var revealSelectors = [
         '.page__content > h1',
         '.page__content > p',
-        '.ox-callout',
-        '.ox-chips'
+        '.ox-callout'
       ];
       var revealEls = document.querySelectorAll(revealSelectors.join(','));
       Array.prototype.forEach.call(revealEls, function (el, i) {
@@ -118,7 +135,7 @@
         el.style.transitionDelay = (Math.min(i, 6) * 0.05) + 's';
       });
 
-      if (prefersReduced) {
+      if (prefersReduced || !('IntersectionObserver' in window)) {
         // Skip motion entirely; mark everything visible immediately.
         Array.prototype.forEach.call(revealEls, function (el) {
           el.classList.add('ox-reveal--visible');
@@ -138,90 +155,80 @@
         });
       }
 
-      // ---- 2) Active-nav indicator --------------------------------------
-      // Map heading IDs to nav <a href="..."> values
-      var navMap = {
-        'about-me':      '/#about-me',
-        '-publications': '/#-publications',
-        '-contact':      '/#-contact'
-      };
-
-      var navLinks = {};
-      Object.keys(navMap).forEach(function (id) {
-        var href = navMap[id];
-        var a = document.querySelector('.ox-topnav__links a[href="' + href + '"]');
-        if (a) navLinks[id] = a;
-      });
-
+      // ---- 2) Keep one nav item active throughout its section -----------
       var sections = [];
-      Object.keys(navMap).forEach(function (id) {
-        var el = document.getElementById(id);
-        if (el && navLinks[id]) sections.push(el);
+      document.querySelectorAll('.ox-topnav__links a[href*="#"]').forEach(function (link) {
+        var id = link.hash.slice(1);
+        var target = document.getElementById(id);
+        if (target) sections.push({ link: link, target: target });
       });
+      if (!sections.length) return;
 
-      if (sections.length === 0) return;
-
-      function clearActive() {
-        Object.keys(navLinks).forEach(function (id) {
-          navLinks[id].removeAttribute('data-active');
-        });
-      }
-
-      var visibleIds = {};
-      var activeObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            visibleIds[entry.target.id] = true;
-          } else {
-            delete visibleIds[entry.target.id];
-          }
-        });
-
-        // Pick the first section (in document order) that is currently in
-        // the active band. Only one active at a time.
-        clearActive();
+      var activeTicking = false;
+      function updateActive() {
+        var active = sections[0];
         for (var i = 0; i < sections.length; i++) {
-          var sid = sections[i].id;
-          if (visibleIds[sid]) {
-            navLinks[sid].setAttribute('data-active', 'true');
-            break;
-          }
+          if (sections[i].target.getBoundingClientRect().top <= 160) active = sections[i];
+          else break;
         }
-      }, {
-        // Active section = the one near the middle of the viewport
-        rootMargin: '-40% 0px -50% 0px',
-        threshold: 0
-      });
-
-      sections.forEach(function (s) { activeObserver.observe(s); });
+        var doc = document.documentElement;
+        if (window.scrollY + window.innerHeight >= doc.scrollHeight - 2) {
+          active = sections[sections.length - 1];
+        }
+        sections.forEach(function (section) {
+          if (section === active) {
+            section.link.setAttribute('data-active', 'true');
+            section.link.setAttribute('aria-current', 'location');
+          } else {
+            section.link.removeAttribute('data-active');
+            section.link.removeAttribute('aria-current');
+          }
+        });
+        activeTicking = false;
+      }
+      function queueActive() {
+        if (!activeTicking) {
+          window.requestAnimationFrame(updateActive);
+          activeTicking = true;
+        }
+      }
+      window.addEventListener('scroll', queueActive, { passive: true });
+      window.addEventListener('resize', queueActive, { passive: true });
+      updateActive();
     });
   })();
 
-  // Scroll progress bar (top of page) — rAF-throttled
+  // Reading progress includes both the page and the three scrollable lists.
   (function () {
     var bar = document.querySelector('.ox-progress');
     if (!bar) return;
+    var panels = document.querySelectorAll('.ox-panel__content');
     var ticking = false;
     function update() {
       var doc = document.documentElement;
       var scrollTop = window.scrollY || doc.scrollTop || 0;
-      var height = (doc.scrollHeight || document.body.scrollHeight) - (doc.clientHeight || window.innerHeight);
+      var height = Math.max(0, (doc.scrollHeight || document.body.scrollHeight) - (doc.clientHeight || window.innerHeight));
+      Array.prototype.forEach.call(panels, function (panel) {
+        var range = Math.max(0, panel.scrollHeight - panel.clientHeight);
+        height += range;
+        scrollTop += Math.min(Math.max(panel.scrollTop, 0), range);
+      });
       var ratio = height > 0 ? Math.min(Math.max(scrollTop / height, 0), 1) : 0;
       bar.style.transform = 'scaleX(' + ratio + ')';
       ticking = false;
     }
-    window.addEventListener('scroll', function () {
+    function queueUpdate() {
       if (!ticking) {
         window.requestAnimationFrame(update);
         ticking = true;
       }
-    }, { passive: true });
-    window.addEventListener('resize', function () {
-      if (!ticking) {
-        window.requestAnimationFrame(update);
-        ticking = true;
-      }
-    }, { passive: true });
+    }
+    window.addEventListener('scroll', queueUpdate, { passive: true });
+    window.addEventListener('resize', queueUpdate, { passive: true });
+    Array.prototype.forEach.call(panels, function (panel) {
+      panel.addEventListener('scroll', queueUpdate, { passive: true });
+      panel.addEventListener('click', queueUpdate);
+    });
     update();
   })();
 
@@ -258,21 +265,4 @@
     update();
   })();
 
-  // Page-mount sweep trigger: add `js-loaded` class on body to fire CSS animation once.
-  (function () {
-    var prefersReduced = window.matchMedia &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) return; // CSS also guards, but skip the class entirely.
-    function fire() {
-      // Use rAF to ensure the CSS has settled before kicking off animation.
-      window.requestAnimationFrame(function () {
-        document.body.classList.add('js-loaded');
-      });
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fire);
-    } else {
-      fire();
-    }
-  })();
 </script>

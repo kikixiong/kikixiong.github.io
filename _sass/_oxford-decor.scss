@@ -1,62 +1,8 @@
 /* ==========================================================================
-   Oxford Classic — page-mount sweep, hero name gradient, dot-grid background
+   Oxford Classic — name treatment and quiet background texture
    ========================================================================== */
 
-/* --- 1) Page-mount sweep --------------------------------------------------- */
-/* A thin gold horizontal line sweeps L→R once on load, then fades out.
-   Pure-CSS approach: animation triggers when <body> gets `.js-loaded`. */
-.ox-mount-veil {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(200, 169, 81, 0.0) 10%,
-    var(--ox-gold) 50%,
-    rgba(200, 169, 81, 0.0) 90%,
-    transparent 100%
-  );
-  transform: translateX(-100%);
-  opacity: 0;
-  z-index: 102; /* above .ox-progress (101) and .ox-topnav (100) */
-  pointer-events: none;
-  will-change: transform, opacity;
-}
-
-body.js-loaded .ox-mount-veil {
-  animation: ox-mount-sweep 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
-}
-
-@keyframes ox-mount-sweep {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-}
-
-/* Skip ceremony entirely under reduced-motion */
-@media (prefers-reduced-motion: reduce) {
-  body.js-loaded .ox-mount-veil,
-  .ox-mount-veil {
-    animation: none !important;
-    display: none !important;
-  }
-}
-
-/* --- 2) Hero name gradient (.ox-sidebar__name) ----------------------------- */
+/* --- Sidebar name gradient ------------------------------------------------- */
 .ox-sidebar__name {
   /* Light-mode gradient: blue dominant, fading to gold accent */
   background: linear-gradient(
@@ -106,7 +52,7 @@ html[data-theme="dark"] .ox-sidebar__name:hover {
   }
 }
 
-/* --- 3) Subtle background dot grid ---------------------------------------- */
+/* --- Subtle background dot grid ------------------------------------------- */
 /* Layer a 16px-spaced dot pattern over the existing parchment fill.
    Existing rule: `body { background: var(--ox-bg); }` (a solid color).
    We override with a layered shorthand: image first, then base color. */
