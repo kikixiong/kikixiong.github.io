@@ -1,13 +1,13 @@
 /* The profile uses only the space beside About; the rest reads in one column. */
 .ox-intro-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
+  grid-template-columns: 260px minmax(0, 1fr);
   gap: 32px;
   align-items: start;
 }
 
-.ox-intro-layout__profile { grid-column: 2; grid-row: 1; }
-.ox-intro-layout__body { grid-column: 1; grid-row: 1; min-width: 0; }
+.ox-intro-layout__profile { grid-column: 1; grid-row: 1; }
+.ox-intro-layout__body { grid-column: 2; grid-row: 1; min-width: 0; }
 
 .page__content #about-me {
   margin: 0 0 24px;
@@ -172,6 +172,13 @@
   background: #fff;
   border: 1px solid var(--ox-border);
   border-radius: 8px;
+}
+
+.ox-institution__badge--oxford {
+  padding: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #002147;
 }
 
 .ox-roadmap .ox-roadmap__title {
