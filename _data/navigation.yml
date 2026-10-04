@@ -13,7 +13,7 @@ main:
     url: "/#-publications"
 
   - title: "Blogs"
-    url: "https://kikixiong.github.io/blogs/"
+    url: "/#blogs"
 
   - title: "Contact"
     url: "/#-contact"

@@ -61,7 +61,11 @@ redirect_from:
 # ✍️ Blogs
 {: #blogs }
 
-**TBD** — This space will focus on some interesting things. Coming soon.
+I write about machine learning foundations and research notes on my [blog](https://kikixiong.github.io/blogs/). Recent posts:
+
+- [Transformer 编码器与解码器：一张结构图读懂信息流](https://kikixiong.github.io/blogs/2026/10/04/transformer/)
+- [BERT：双向编码器、预训练与微调](https://kikixiong.github.io/blogs/2026/10/04/bert/)
+- [图学习入门：从消息传递到 GCN 与 GAT](https://kikixiong.github.io/blogs/2026/10/04/graph-learning/)
 
 
 # 📬 Contact
