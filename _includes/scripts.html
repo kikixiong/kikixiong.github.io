@@ -198,15 +198,21 @@
     });
   })();
 
-  // Reading progress follows the page, including its Blogs and Contact sections.
+  // Reading progress includes both the page and the three scrollable lists.
   (function () {
     var bar = document.querySelector('.ox-progress');
     if (!bar) return;
+    var panels = document.querySelectorAll('.ox-panel__content');
     var ticking = false;
     function update() {
       var doc = document.documentElement;
       var scrollTop = window.scrollY || doc.scrollTop || 0;
       var height = Math.max(0, (doc.scrollHeight || document.body.scrollHeight) - (doc.clientHeight || window.innerHeight));
+      Array.prototype.forEach.call(panels, function (panel) {
+        var range = Math.max(0, panel.scrollHeight - panel.clientHeight);
+        height += range;
+        scrollTop += Math.min(Math.max(panel.scrollTop, 0), range);
+      });
       var ratio = height > 0 ? Math.min(Math.max(scrollTop / height, 0), 1) : 0;
       bar.style.transform = 'scaleX(' + ratio + ')';
       ticking = false;
@@ -219,6 +225,10 @@
     }
     window.addEventListener('scroll', queueUpdate, { passive: true });
     window.addEventListener('resize', queueUpdate, { passive: true });
+    Array.prototype.forEach.call(panels, function (panel) {
+      panel.addEventListener('scroll', queueUpdate, { passive: true });
+      panel.addEventListener('click', queueUpdate);
+    });
     update();
   })();
 
