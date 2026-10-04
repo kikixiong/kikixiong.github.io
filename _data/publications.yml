@@ -61,6 +61,8 @@ publications:
     tags: ["Multimodal", "Benchmark", "MLLM"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2603.18048" }
+      - { name: "Code", url: "https://github.com/kikixiong/DEAF" }
+      - { name: "Dataset", url: "https://huggingface.co/datasets/Wonder239/DEAF" }
     bibtex: |
       @article{xiong2026deaf,
         title         = {{DEAF}: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models},
