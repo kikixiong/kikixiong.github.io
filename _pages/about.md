@@ -24,50 +24,32 @@ redirect_from:
 </div>
 
 
-# 🔥 News
+# News
 
-{% capture news_content %}{% include news-timeline.html %}{% endcapture %}
-{% include scroll-panel.html content=news_content kind="news" label="News" count=site.data.news.size unit="updates" %}
+{% include news-timeline.html %}
 
 
-# 📖 Education
+# Education
 
 {% include education-cards.html %}
 
 
-# 💼 Work & Research Experience
+# Work & Research Experience
 
-{% capture experience_content %}{% include experience-timeline.html %}{% endcapture %}
-{% include scroll-panel.html content=experience_content kind="experience" label="Work and research experience" count=site.data.experience.size unit="experiences" %}
-
-
-# 📝 Publications
-
-{% capture publications_content %}{% include publications-list.html %}{% endcapture %}
-{% include scroll-panel.html content=publications_content kind="publications" label="Publications" count=site.data.publications.publications.size unit="publications" %}
+{% include experience-timeline.html %}
 
 
-# 🎖 Honors and Awards
+# Publications
+
+{% include publications-list.html %}
+
+
+# Honors and Awards
 
 {% include honors-grid.html %}
 
 
-# 🤝 Academic Service
+# Academic Service
 
 - Reviewer, International Conference on Learning Representations (ICLR)
 - Reviewer, [ICML 2026 Workshop on Graph Foundation Models: A New Era for Graph Machine Learning (GFM)](https://openreview.net/group?id=ICML.cc/2026/Workshop/GFM)
-
-
-# ✍️ Blogs
-{: #blogs }
-
-**TBD** — This space will focus on some interesting things. Coming soon.
-
-
-# 📬 Contact
-
-<span class='anchor' id='-contact'></span>
-
-Reach me at **[{{ site.author.email }}](mailto:{{ site.author.email }})**, or find me on [GitHub](https://github.com/{{ site.author.github }}) · [Google Scholar]({{ site.author.googlescholar }}) · [LinkedIn](https://www.linkedin.com/in/{{ site.author.linkedin }}).
-
-Based in Oxford, UK. Open to research collaboration and chats.

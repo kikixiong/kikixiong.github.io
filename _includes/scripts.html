@@ -108,11 +108,16 @@
     }
   })();
 
-  // Scroll reveal and section-aware navigation
+  // Older links used emoji-derived ids such as #-publications; send them to the current #publications.
   (function () {
-    var prefersReduced = window.matchMedia &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var hash = window.location.hash;
+    if (!/^#-[\w-]+$/.test(hash) || document.getElementById(hash.slice(1))) return;
+    var target = document.getElementById(hash.slice(2));
+    if (target) window.location.replace('#' + target.id);
+  })();
 
+  // Section-aware navigation
+  (function () {
     function onReady(fn) {
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', fn);
@@ -122,40 +127,7 @@
     }
 
     onReady(function () {
-      // ---- 1) Reveal-on-scroll ------------------------------------------
-      var revealSelectors = [
-        '.page__content > h1',
-        '.page__content > p',
-        '.ox-callout'
-      ];
-      var revealEls = document.querySelectorAll(revealSelectors.join(','));
-      Array.prototype.forEach.call(revealEls, function (el, i) {
-        el.classList.add('ox-reveal');
-        // small stagger for adjacent items
-        el.style.transitionDelay = (Math.min(i, 6) * 0.05) + 's';
-      });
-
-      if (prefersReduced || !('IntersectionObserver' in window)) {
-        // Skip motion entirely; mark everything visible immediately.
-        Array.prototype.forEach.call(revealEls, function (el) {
-          el.classList.add('ox-reveal--visible');
-        });
-      } else {
-        var revealObserver = new IntersectionObserver(function (entries, obs) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('ox-reveal--visible');
-              obs.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.15 });
-
-        Array.prototype.forEach.call(revealEls, function (el) {
-          revealObserver.observe(el);
-        });
-      }
-
-      // ---- 2) Keep one nav item active throughout its section -----------
+      // Keep one nav item active throughout its section.
       var sections = [];
       document.querySelectorAll('.ox-topnav__links a[href*="#"]').forEach(function (link) {
         var id = link.hash.slice(1);
@@ -198,21 +170,15 @@
     });
   })();
 
-  // Reading progress includes both the page and the three scrollable lists.
+  // Reading progress bar.
   (function () {
     var bar = document.querySelector('.ox-progress');
     if (!bar) return;
-    var panels = document.querySelectorAll('.ox-panel__content');
     var ticking = false;
     function update() {
       var doc = document.documentElement;
       var scrollTop = window.scrollY || doc.scrollTop || 0;
       var height = Math.max(0, (doc.scrollHeight || document.body.scrollHeight) - (doc.clientHeight || window.innerHeight));
-      Array.prototype.forEach.call(panels, function (panel) {
-        var range = Math.max(0, panel.scrollHeight - panel.clientHeight);
-        height += range;
-        scrollTop += Math.min(Math.max(panel.scrollTop, 0), range);
-      });
       var ratio = height > 0 ? Math.min(Math.max(scrollTop / height, 0), 1) : 0;
       bar.style.transform = 'scaleX(' + ratio + ')';
       ticking = false;
@@ -225,10 +191,6 @@
     }
     window.addEventListener('scroll', queueUpdate, { passive: true });
     window.addEventListener('resize', queueUpdate, { passive: true });
-    Array.prototype.forEach.call(panels, function (panel) {
-      panel.addEventListener('scroll', queueUpdate, { passive: true });
-      panel.addEventListener('click', queueUpdate);
-    });
     update();
   })();
 

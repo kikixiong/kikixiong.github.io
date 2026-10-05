@@ -10,7 +10,7 @@
 .ox-intro-layout__body { grid-column: 2; grid-row: 1; min-width: 0; }
 
 .page__content #about-me {
-  margin: 0 0 24px;
+  margin: 0 0 16px;
   scroll-margin-top: 88px;
 }
 
@@ -18,12 +18,10 @@
 
 .page__content .ox-intro__title {
   margin: 0 0 20px;
-  padding: 0 0 12px;
-  border-bottom: 1px solid var(--ox-border);
+  padding: 0;
   color: var(--ox-primary);
   font-family: $display;
-  font-size: clamp(1.75rem, 2.6vw, 2.35rem);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .page__content .ox-intro p {
@@ -40,6 +38,19 @@
 
 .ox-intro__interests strong { color: var(--ox-primary); }
 
+/* Small-caps group label used inside Publications and Honors. */
+.ox-subheading {
+  margin: 1.1em 0 0.45em;
+  font-family: $sans-serif;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ox-text-muted);
+}
+
+.page__content > h1 + .ox-subheading { margin-top: 0.3em; }
+
 @include breakpoint(max-width 760px) {
   .ox-intro-layout {
     display: flex;
@@ -50,72 +61,23 @@
   .ox-intro-layout__body { width: 100%; }
 }
 
-/* Bounded reading areas keep longer lists available without lengthening the page. */
-.ox-panel {
-  margin-top: 1.2em;
-  border: 1px solid var(--ox-border);
-  border-radius: 10px;
-  background: var(--ox-surface);
-  overflow: hidden;
-}
-
-.ox-panel__summary {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 11px 18px;
-  border-bottom: 1px solid var(--ox-border);
-  color: var(--ox-text-muted);
-  font-family: $sans-serif;
-  font-size: 0.82rem;
-}
-
-.ox-panel__content {
-  max-height: 30rem;
-  overflow-y: auto;
-  scrollbar-gutter: stable;
-  scrollbar-width: thin;
-  scrollbar-color: var(--ox-text-muted) var(--ox-surface);
-  padding: 16px 18px;
-
-  &:focus-visible {
-    outline: 2px solid var(--ox-primary);
-    outline-offset: -3px;
-  }
-
-  &::-webkit-scrollbar { width: 8px; }
-  &::-webkit-scrollbar-track { background: var(--ox-surface); }
-  &::-webkit-scrollbar-thumb {
-    background: var(--ox-text-muted);
-    border: 2px solid var(--ox-surface);
-    border-radius: 8px;
-  }
-
-  > .ox-timeline,
-  > .ox-pub-list,
-  > .ox-roadmap { margin: 0; }
-}
-
-.ox-panel__content--news { max-height: 18rem; }
-.ox-panel__content--experience { max-height: 20rem; }
-.ox-panel__content--publications { max-height: min(44rem, 75vh); }
 
 /* Dates sit beside a continuous gold route; concurrent degrees share a stop. */
 .ox-roadmap {
   list-style: none;
   padding: 0;
-  margin: 1.2em 0 0;
+  margin: 0;
 }
 
 .ox-roadmap__step {
   display: grid;
-  grid-template-columns: 155px minmax(0, 1fr);
-  column-gap: 28px;
+  grid-template-columns: 140px minmax(0, 1fr);
+  column-gap: 24px;
   margin: 0;
 }
 
 .ox-roadmap__date {
-  padding: 2px 0 26px;
+  padding: 2px 0 14px;
   color: var(--ox-text-muted);
   font-family: $sans-serif;
   font-size: 0.76rem;
@@ -126,7 +88,7 @@
   position: relative;
   min-width: 0;
   border-left: 1px solid var(--ox-gold);
-  padding: 0 0 28px 26px;
+  padding: 0 0 16px 22px;
 
   &::before {
     content: "";
@@ -151,12 +113,12 @@
 }
 
 .ox-roadmap__step:last-child .ox-roadmap__date { padding-bottom: 0; }
-.ox-roadmap__qualification + .ox-roadmap__qualification { margin-top: 18px; }
+.ox-roadmap__qualification + .ox-roadmap__qualification { margin-top: 12px; }
 
 .ox-institution {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 12px;
   min-width: 0;
 }
 
@@ -164,10 +126,10 @@
 .ox-roadmap--experience .ox-institution { align-items: center; }
 
 .ox-institution__badge {
-  flex: 0 0 52px;
-  width: 52px;
-  height: 52px;
-  padding: 3px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
   object-fit: scale-down;
   background: #fff;
   border: 1px solid var(--ox-border);
@@ -182,11 +144,12 @@
 }
 
 .ox-roadmap .ox-roadmap__title {
-  margin: 0 0 4px;
+  margin: 0 0 2px;
   color: var(--ox-primary);
-  font-family: $display;
-  font-size: 1.12rem;
-  line-height: 1.4;
+  font-family: $serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 .ox-roadmap .ox-roadmap__type {
@@ -215,7 +178,7 @@
 
 .ox-roadmap__honour {
   display: inline-block;
-  margin-top: 7px;
+  margin-top: 5px;
   padding: 2px 8px;
   border: 1px solid var(--ox-gold);
   border-radius: 4px;
@@ -228,7 +191,7 @@
   .ox-roadmap__step {
     grid-template-columns: minmax(0, 1fr);
     margin-left: 5px;
-    padding: 0 0 24px 22px;
+    padding: 0 0 14px 18px;
     border-left: 1px solid var(--ox-gold);
     position: relative;
   }
@@ -245,17 +208,6 @@
   }
 }
 
-@include breakpoint(max-width 760px) {
-  .ox-panel__summary { padding: 10px 12px; gap: 8px; }
-  .ox-panel__content {
-    max-height: min(32rem, 60vh);
-    padding: 14px 12px;
-  }
-}
-
 @media print {
-  .ox-panel { overflow: visible; border: 0; }
-  .ox-panel__summary { display: none; }
-  .ox-panel__content { max-height: none; overflow: visible; padding: 0; }
   .ox-roadmap__step { break-inside: avoid; }
 }

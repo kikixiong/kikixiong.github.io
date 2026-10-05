@@ -1,6 +1,7 @@
+{%- comment -%} One chronological list, newest first. {%- endcomment -%}
+{%- assign sorted = site.data.publications.publications | sort: "date" | reverse -%}
 <div class="ox-pub-list">
-  {% assign sorted = site.data.publications.publications | sort: "date" | reverse %}
-  {% for pub in sorted %}
+  {%- for pub in sorted -%}
     {% include publication-item.html pub=pub %}
-  {% endfor %}
+  {%- endfor -%}
 </div>
