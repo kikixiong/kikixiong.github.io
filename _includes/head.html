@@ -3,18 +3,13 @@
 {% include seo.html %}
 
 {% comment %}
-  Open Graph + Twitter Card augmentations.
-  jekyll-seo-tag (via _includes/seo.html) already emits: og:locale, og:site_name,
-  og:title, og:url, and og:description (only when page.excerpt is set). It only
-  emits twitter:* tags when site.twitter.username is configured (currently it
-  isn't). The tags below ADD the missing pieces (og:type=profile, og:image,
-  twitter:card=summary, profile:* names) so LinkedIn / Twitter / WeChat get a
-  rich preview with the avatar. Placed AFTER seo.html so duplicates take
-  last-wins precedence.
+  Open Graph + Twitter Card tags. _includes/seo.html emits the title, meta
+  description, canonical and og:url; every og:* / twitter:* tag below is
+  emitted only here so crawlers never see conflicting duplicates.
 {% endcomment %}
 <meta property="og:type" content="profile">
 <meta property="og:title" content="{{ site.author.name | default: site.title }} — Academic homepage">
-<meta property="og:description" content="{{ site.author.bio | default: site.description }}">
+<meta property="og:description" content="{{ site.description | default: site.author.bio }}">
 <meta property="og:image" content="{{ '/images/kiki.png' | absolute_url }}">
 <meta property="og:image:alt" content="{{ site.author.name }} portrait">
 <meta property="og:locale" content="en_GB">
@@ -22,11 +17,35 @@
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ site.author.name }}">
-<meta name="twitter:description" content="{{ site.author.bio }}">
+<meta name="twitter:description" content="{{ site.description | default: site.author.bio }}">
 <meta name="twitter:image" content="{{ '/images/kiki.png' | absolute_url }}">
 
 <meta property="profile:first_name" content="Jiaqi">
 <meta property="profile:last_name" content="Xiong">
+
+{% comment %} Structured Person data so search engines can link the profiles below to this page. {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.author.name | jsonify }},
+  "alternateName": "熊嘉琪",
+  "url": {{ '/' | absolute_url | jsonify }},
+  "image": {{ '/images/kiki.png' | absolute_url | jsonify }},
+  "email": {{ site.author.email | prepend: 'mailto:' | jsonify }},
+  "jobTitle": "MSc Student, Social Data Science",
+  "affiliation": { "@type": "Organization", "name": "Oxford Internet Institute, University of Oxford" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "University of Aberdeen" },
+    { "@type": "CollegeOrUniversity", "name": "South China Normal University" }
+  ],
+  "sameAs": [
+    {{ site.author.googlescholar | jsonify }},
+    {{ site.author.github | prepend: 'https://github.com/' | jsonify }},
+    {{ site.author.linkedin | prepend: 'https://www.linkedin.com/in/' | jsonify }}
+  ]
+}
+</script>
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">

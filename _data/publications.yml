@@ -6,14 +6,14 @@ publications:
     venue: "NeurIPS 2026 (Accepted)"
     venue_short: "NeurIPS '26"
     date: "2026-09"
-    thumbnail: "images/publications/occstress-overview.png"
+    thumbnail: "images/publications/thumbs/occstress.webp"
 
   - title: "Beyond Gene Reconstruction: Learning Cell Representations through Complementary Transcriptomic Views"
     authors: "**Jiaqi Xiong\\***, Yuntao Hu\\*, Yu Zheng, Yifei Shi, Xinyue Guo, Jiaxin Qi"
     venue: "Preprint"
     venue_short: "Preprint"
     date: "2026-08"
-    thumbnail: "images/publications/CoCoS.png"
+    thumbnail: "images/publications/thumbs/CoCoS.webp"
     first_author: true
     tags: ["Single-Cell", "Contrastive Learning", "Foundation Model"]
     links:
@@ -34,7 +34,7 @@ publications:
     venue: "KDD 2026 Datasets and Benchmarks Track"
     venue_short: "KDD '26"
     date: "2026-06"
-    thumbnail: "images/publications/CrediBench.png"
+    thumbnail: "images/publications/thumbs/CrediBench.webp"
     tags: ["Temporal Graph", "Misinformation", "Benchmark"]
     links:
       - { name: "Paper",   url: "https://arxiv.org/abs/2509.23340" }
@@ -56,7 +56,7 @@ publications:
     venue: "AACL-IJCNLP 2026 (Accepted)"
     venue_short: "AACL-IJCNLP '26"
     date: "2026-03"
-    thumbnail: "images/publications/DEAF.png"
+    thumbnail: "images/publications/thumbs/DEAF.webp"
     first_author: true
     tags: ["Multimodal", "Benchmark", "MLLM"]
     links:
@@ -79,7 +79,7 @@ publications:
     venue: "CVPR 2026"
     venue_short: "CVPR '26"
     date: "2026-02"
-    thumbnail: "images/publications/CLAIMS.png"
+    thumbnail: "images/publications/thumbs/CLAIMS.webp"
     tags: ["Humanoid", "Motion", "Robotics"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2602.21599" }
@@ -99,7 +99,7 @@ publications:
     venue: "AACL-IJCNLP 2026 (Accepted)"
     venue_short: "AACL-IJCNLP '26"
     date: "2026-02"
-    thumbnail: "images/publications/T2MBench.png"
+    thumbnail: "images/publications/thumbs/T2MBench.webp"
     tags: ["Text-to-Motion", "Benchmark", "Generalization"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2602.13751" }
@@ -120,7 +120,7 @@ publications:
     venue: "Preprint"
     venue_short: "Preprint"
     date: "2026-01"
-    thumbnail: "images/publications/V-FAT.png"
+    thumbnail: "images/publications/thumbs/V-FAT.webp"
     tags: ["Multimodal", "Benchmark", "MLLM"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2601.04897" }
@@ -159,7 +159,7 @@ publications:
     venue: "BMC Bioinformatics, vol. 26 (2025)"
     venue_short: "BMC Bioinf."
     date: "2025-06"
-    thumbnail: "images/publications/XATGRN.png"
+    thumbnail: "images/publications/thumbs/XATGRN.webp"
     first_author: true
     tags: ["GNN", "Bioinformatics", "Genomics"]
     links:
@@ -182,7 +182,7 @@ publications:
     venue: "bioRxiv (Accepted at ISMB 2025)"
     venue_short: "ISMB '25"
     date: "2025-01"
-    thumbnail: "images/MutBERT.png"
+    thumbnail: "images/publications/thumbs/MutBERT.webp"
     tags: ["Genomics", "Foundation Model", "BERT"]
     links:
       - { name: "Paper", url: "https://www.biorxiv.org/content/10.1101/2025.01.23.634452v1" }
@@ -201,7 +201,7 @@ publications:
     venue: "Knowledge-Based Systems (Accepted)"
     venue_short: "KBS '26"
     date: "2026-09"
-    thumbnail: "images/publications/PillarTrack.png"
+    thumbnail: "images/publications/thumbs/PillarTrack.webp"
     tags: ["3D Tracking", "Point Cloud", "Transformer"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2404.07495" }

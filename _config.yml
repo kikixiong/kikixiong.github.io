@@ -7,7 +7,9 @@
 
 # Site Settings
 title                    : "Jiaqi Xiong"
-description              : ""
+description              : "Jiaqi Xiong (熊嘉琪), MSc Social Data Science student at the Oxford Internet Institute, University of Oxford. Research interests: self-evolving agents, agentic scientific discovery, and biological foundation models."
+url                      : "https://kikixiong.github.io"
+baseurl                  : ""
 repository               : "kikixiong/kikixiong.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -22,7 +24,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Jiaqi Xiong"
-  avatar           : "images/kiki.png"
+  avatar           : "images/kiki-avatar.webp"
   bio              : "Master student at University of Oxford."
   location         : "Oxford, UK"
   employer         :
