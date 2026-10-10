@@ -16,12 +16,25 @@
       <span class="ox-pub__venue">{{ pub.venue }}</span>
       {%- for link in pub.links -%}
         <span class="ox-pub__sep" aria-hidden="true">·</span>
-        <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.name }}</a>
+        <a href="{{ link.url }}" target="_blank" rel="noopener">
+          {%- if link.name == 'Paper' -%}
+            {%- if link.url contains 'arxiv.org/' -%}
+              <span class="ox-pub__brand-icon ox-pub__brand-icon--arxiv" aria-hidden="true"></span>
+            {%- else -%}
+              <i class="fas fa-file-alt ox-pub__link-icon" aria-hidden="true"></i>
+            {%- endif -%}
+          {%- elsif link.name == 'Code' and link.url contains 'github.com/' -%}
+            <i class="fab fa-github ox-pub__link-icon" aria-hidden="true"></i>
+          {%- elsif link.name == 'Dataset' and link.url contains 'huggingface.co/' -%}
+            <span class="ox-pub__brand-icon ox-pub__brand-icon--huggingface" aria-hidden="true"></span>
+          {%- endif -%}
+          {{- link.name -}}
+        </a>
       {%- endfor -%}
       {%- if pub.bibtex -%}
         <span class="ox-pub__sep" aria-hidden="true">·</span>
         <button class="ox-pub__bib-toggle" type="button" aria-expanded="false"
-                aria-controls="{{ bib_id }}" data-bib-toggle="{{ bib_id }}">BibTeX</button>
+                aria-controls="{{ bib_id }}" data-bib-toggle="{{ bib_id }}"><i class="fas fa-quote-right ox-pub__link-icon" aria-hidden="true"></i> BibTeX</button>
       {%- endif -%}
     </div>
     {%- if pub.bibtex -%}

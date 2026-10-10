@@ -84,6 +84,36 @@
 
 .ox-pub__sep { opacity: 0.5; }
 
+.ox-pub__link-icon,
+.ox-pub__brand-icon {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  vertical-align: -0.06em;
+}
+
+.ox-pub__brand-icon {
+  height: 1em;
+  background: currentColor;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.ox-pub__brand-icon--arxiv {
+  -webkit-mask-image: url('../img/arxiv-logo.svg');
+  mask-image: url('../img/arxiv-logo.svg');
+}
+
+.ox-pub__brand-icon--huggingface {
+  -webkit-mask-image: url('../img/huggingface-logo.svg');
+  mask-image: url('../img/huggingface-logo.svg');
+}
+
 /* The BibTeX toggle is a button but reads like the links beside it. */
 .ox-pub__bib-toggle {
   appearance: none;

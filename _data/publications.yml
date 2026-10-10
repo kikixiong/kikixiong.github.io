@@ -10,6 +10,16 @@ publications:
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2512.15621" }
       - { name: "Project", url: "https://insailab.org/OccStress/" }
+      - { name: "Code", url: "https://github.com/InSAI-Lab/OccStress" }
+      - { name: "Dataset", url: "https://huggingface.co/datasets/insailab/OccStress" }
+    bibtex: |
+      @inproceedings{zheng2026occstress,
+        title = {{OccStress}: Stress-Testing the {4D} Occupancy Forecasting Chain},
+        author = {Zheng, Yu and Hu, Jie and Xiong, Jiaqi and Liu, Ruiping and Zheng, Junwei and Yang, Kailun and Zhang, Jiaming},
+        booktitle = {Advances in Neural Information Processing Systems},
+        year = {2026},
+        url = {https://arxiv.org/abs/2512.15621}
+      }
 
   - title: "Beyond Gene Reconstruction: Learning Cell Representations through Complementary Transcriptomic Views"
     authors: "**Jiaqi Xiong\\***, Yuntao Hu\\*, Yu Zheng, Yifei Shi, Xinyue Guo, Jiaxin Qi"
