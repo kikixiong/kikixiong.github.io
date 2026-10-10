@@ -7,6 +7,9 @@ publications:
     venue_short: "NeurIPS '26"
     date: "2026-09"
     thumbnail: "images/publications/thumbs/occstress.webp"
+    links:
+      - { name: "Paper", url: "https://arxiv.org/abs/2512.15621" }
+      - { name: "Project", url: "https://insailab.org/OccStress/" }
 
   - title: "Beyond Gene Reconstruction: Learning Cell Representations through Complementary Transcriptomic Views"
     authors: "**Jiaqi Xiong\\***, Yuntao Hu\\*, Yu Zheng, Yifei Shi, Xinyue Guo, Jiaxin Qi"
