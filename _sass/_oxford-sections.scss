@@ -3,11 +3,21 @@
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 32px;
-  align-items: start;
+  align-items: stretch;
 }
 
-.ox-intro-layout__profile { grid-column: 1; grid-row: 1; }
-.ox-intro-layout__body { grid-column: 2; grid-row: 1; min-width: 0; }
+.ox-intro-layout__profile { grid-column: 1; grid-row: 1; display: flex; }
+.ox-intro-layout__profile > .ox-sidebar { flex: 1; }
+.ox-intro-layout__body {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ox-intro-layout__body .ox-intro { margin-bottom: 24px; }
+.ox-intro-layout__body .ox-callout--seeking { margin: auto 0 0; }
 
 .page__content #about-me {
   margin: 0 0 16px;
@@ -59,6 +69,10 @@
   }
   .ox-intro-layout__profile,
   .ox-intro-layout__body { width: 100%; }
+  .ox-intro-layout__profile > .ox-sidebar { height: auto; }
+  .ox-intro-layout__body { display: block; }
+  .ox-intro-layout__body .ox-intro { margin-bottom: 0; }
+  .ox-intro-layout__body .ox-callout--seeking { margin: 1.6em 0; }
 }
 
 
