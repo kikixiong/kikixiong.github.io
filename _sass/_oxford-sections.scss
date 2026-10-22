@@ -16,7 +16,7 @@
   flex-direction: column;
 }
 
-.ox-intro-layout__body .ox-intro { margin-bottom: 24px; }
+.ox-intro-layout__body .ox-intro { margin-bottom: 16px; }
 .ox-intro-layout__body .ox-callout--seeking { margin: auto 0 0; }
 
 .page__content #about-me {
@@ -40,26 +40,46 @@
   line-height: 1.73;
 }
 
-/* Three research themes sit below the About grid as one full-width section. */
+/* Compact research list in the About column, directly above the seeking note. */
+.ox-interests-section { scroll-margin-top: 88px; }
+
+.page__content .ox-interests__heading {
+  margin: 0 0 14px;
+  font-size: 1.3rem;
+}
+
+.ox-interests__heading::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  margin-top: 6px;
+  background: var(--ox-gold);
+  opacity: 0.8;
+}
+
 .ox-interests {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 2.5vw, 28px);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 9px;
   list-style: none;
   padding: 0 !important;
-  margin: 0 0 1.4em;
+  margin: 0 0 20px;
 }
 
 .page__content .ox-interests__item {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 10px;
   min-width: 0;
   margin: 0;
-  padding: 4px 0 2px 18px;
+  padding: 4px 0 4px 12px;
   border-left: 2px solid var(--ox-gold);
 }
 
 .ox-interests__number {
   display: block;
-  margin-bottom: 8px;
+  margin-top: 2px;
   color: var(--ox-text-muted);
   font-family: $sans-serif;
   font-size: 0.72rem;
@@ -67,18 +87,20 @@
   letter-spacing: 0.08em;
 }
 
+.ox-interests__content { min-width: 0; }
+
 .page__content .ox-interests__title {
-  margin: 0 0 8px;
+  margin: 0 0 2px;
   font-family: $serif;
-  font-size: 1.16rem;
+  font-size: 1rem;
   line-height: 1.35;
 }
 
 .page__content .ox-interests__description {
   margin: 0;
   color: var(--ox-text-muted);
-  font-size: 0.92rem;
-  line-height: 1.58;
+  font-size: 0.86rem;
+  line-height: 1.48;
 }
 
 /* Small-caps group label used inside Publications and Honors. */
@@ -106,7 +128,8 @@
   .ox-intro-layout__body { display: block; }
   .ox-intro-layout__body .ox-intro { margin-bottom: 0; }
   .ox-intro-layout__body .ox-callout--seeking { margin: 1.6em 0; }
-  .ox-interests { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .ox-interests-section { margin-top: 22px; }
+  .ox-interests { margin-bottom: 0; }
 }
 
 
