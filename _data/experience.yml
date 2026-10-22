@@ -1,4 +1,10 @@
 # Roles, institutions, and supervisors; newest first, without project details.
+# Baidu badge: official favicon from https://home.baidu.com/favicon.ico.
+- dates: "Oct 2026 – Present"
+  institution: "Baidu"
+  logo: "/images/institutions/baidu.ico"
+  role: "Research Intern"
+
 - dates: "Jun 2026 – Present"
   institution: "HKUST (Guangzhou)"
   logo: "/images/institutions/hkust-gz.png"
