@@ -16,12 +16,32 @@ redirect_from:
       <h1 class="ox-intro__title" id="about-heading">About me</h1>
       <p>I am a master's student in <a href="https://www.oii.ox.ac.uk/people/profiles/jiaqi-xiong/">Social Data Science</a> at the <a href="https://www.oii.ox.ac.uk/">Oxford Internet Institute</a>, University of Oxford. I am supervised by <a href="https://web.media.mit.edu/~xdong/">Prof. Xiaowen Dong</a> and <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Prof. Michael Bronstein</a>, and work closely with <a href="https://shenyanghuang.github.io/">Dr. Andy Huang</a>. I also work as a research assistant with <a href="https://enyandai.github.io/">Prof. Enyan Dai</a> at the <a href="https://www.hkust-gz.edu.cn/">Hong Kong University of Science and Technology (Guangzhou)</a>.</p>
       <p>Before Oxford, I earned a dual bachelor's degree in Artificial Intelligence from the University of Aberdeen (with first-class honours) and South China Normal University in 2025. I completed my thesis under the supervision of <a href="http://cnorval.com/">Dr. Chris Norval</a> and <a href="https://www.scholat.com/hyang8851.en">Dr. Huan Yang</a>.</p>
-      <p class="ox-intro__interests"><strong>Research interests:</strong> self-evolving agents, agentic scientific discovery, and biological foundation models.</p>
     </section>
 
     {% include seeking-callout.html %}
   </div>
 </div>
+
+
+# Research Interests
+
+<ol class="ox-interests">
+  <li class="ox-interests__item">
+    <span class="ox-interests__number" aria-hidden="true">01</span>
+    <h2 class="ox-interests__title">Agentic Self-Evolution</h2>
+    <p class="ox-interests__description">AI agents that evaluate and refine their own strategies, including recursive self-improvement (RSI).</p>
+  </li>
+  <li class="ox-interests__item">
+    <span class="ox-interests__number" aria-hidden="true">02</span>
+    <h2 class="ox-interests__title">Biological Foundation Models</h2>
+    <p class="ox-interests__description">Foundation models for biological data that support analysis and discovery in the life sciences.</p>
+  </li>
+  <li class="ox-interests__item">
+    <span class="ox-interests__number" aria-hidden="true">03</span>
+    <h2 class="ox-interests__title">Agentic AI for Science</h2>
+    <p class="ox-interests__description">Agentic methods that help accelerate scientific discovery and the research workflow.</p>
+  </li>
+</ol>
 
 
 # News
