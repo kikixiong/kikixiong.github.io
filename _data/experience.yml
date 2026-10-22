@@ -1,9 +1,12 @@
-# Roles, institutions, and supervisors; newest first, without project details.
+# Roles, institutions, and concise program/supervisor details; newest first.
 # Baidu badge: official favicon from https://home.baidu.com/favicon.ico.
 - dates: "Oct 2026 – Present"
   institution: "Baidu"
   logo: "/images/institutions/baidu.ico"
   role: "Research Intern"
+  # Program context: https://talent.baidu.com/jobs/detail/INTERN/58e9ba4a-bcd8-434b-9c8c-3c9768eb59ad
+  program: "Project Pioneer"
+  program_description: "Baidu's R&D internship program exploring AI agents for scientific and industrial research."
 
 - dates: "Jun 2026 – Present"
   institution: "HKUST (Guangzhou)"
