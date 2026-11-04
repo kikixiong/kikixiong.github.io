@@ -39,7 +39,7 @@ redirect_from:
           <span class="ox-interests__number" aria-hidden="true">03</span>
           <div class="ox-interests__content">
             <h3 class="ox-interests__title">Agentic AI for Science</h3>
-            <p class="ox-interests__description">Agentic methods that help accelerate scientific discovery and the research workflow.</p>
+            <p class="ox-interests__description">Agentic methods and the design of a science harness to accelerate scientific discovery and research workflows.</p>
           </div>
         </li>
       </ol>
