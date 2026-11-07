@@ -1,4 +1,25 @@
 publications:
+
+  - title: "Rethinking One Gene, One Token: Transcriptome-Aware Tokenization for Single-Cell Foundation Models"
+    authors: "**Jiaqi Xiong**, Jiaying Li, Yu Zheng, Xiang Zhou, Ziteng Wang, Xinting Hu, Jiaxin Qi"
+    venue: "Preprint"
+    venue_short: "Preprint"
+    date: "2026-10"
+    thumbnail: "images/publications/thumbs/scTAT.webp"
+    first_author: true
+    tags: ["Single-Cell", "Tokenization", "Foundation Model"]
+    links:
+      - { name: "Paper", url: "https://arxiv.org/abs/2611.05410" }
+    bibtex: |
+      @misc{xiong2026rethinkinggenetokentranscriptomeaware,
+        title         = {Rethinking One Gene, One Token: Transcriptome-Aware Tokenization for Single-Cell Foundation Models},
+        author        = {Xiong, Jiaqi and Li, Jiaying and Zheng, Yu and Zhou, Xiang and Wang, Ziteng and Hu, Xinting and Qi, Jiaxin},
+        year          = {2026},
+        eprint        = {2611.05410},
+        archivePrefix = {arXiv},
+        primaryClass  = {q-bio.GN},
+        url           = {https://arxiv.org/abs/2611.05410}
+      }
   # Metadata: https://github.com/FaterYU/FaterYU.github.io/commit/681a12a78606a364e20451915d630eda0d375a46
   # OccStress overview: https://fateryu.github.io/images/publications/occstress-overview.png
   - title: "OccStress: Stress-Testing the 4D Occupancy Forecasting Chain"
