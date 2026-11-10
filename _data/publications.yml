@@ -1,5 +1,5 @@
-# Sort by final venue publication date; use acceptance date when proceedings
-# are pending, or the first public preprint date when there is no venue.
+# Featured papers appear first. The remaining papers are sorted by final venue
+# publication date; use acceptance or first public preprint date if needed.
 publications:
 
   - title: "Rethinking One Gene, One Token: Transcriptome-Aware Tokenization for Single-Cell Foundation Models"
@@ -9,6 +9,7 @@ publications:
     date: "2026-10"
     thumbnail: "images/publications/thumbs/scTAT.webp"
     first_author: true
+    featured: true
     tags: ["Single-Cell", "Tokenization", "Foundation Model"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2611.05410" }
@@ -51,6 +52,7 @@ publications:
     date: "2026-08"
     thumbnail: "images/publications/thumbs/CoCoS.webp"
     first_author: true
+    featured: true
     tags: ["Single-Cell", "Contrastive Learning", "Foundation Model"]
     links:
       - { name: "Paper", url: "https://arxiv.org/abs/2608.00985" }

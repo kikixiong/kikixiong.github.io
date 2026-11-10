@@ -1,9 +1,16 @@
-{%- comment -%} Newest dates first; keep source order for papers sharing a date. {%- endcomment -%}
+{%- comment -%} Feature selected papers, then sort the rest newest first. {%- endcomment -%}
 {%- assign dated_groups = site.data.publications.publications | group_by: "date" | sort: "name" | reverse -%}
 <div class="ox-pub-list">
+  {%- for pub in site.data.publications.publications -%}
+    {%- if pub.featured -%}
+      {% include publication-item.html pub=pub %}
+    {%- endif -%}
+  {%- endfor -%}
   {%- for dated_group in dated_groups -%}
     {%- for pub in dated_group.items -%}
-      {% include publication-item.html pub=pub %}
+      {%- unless pub.featured -%}
+        {% include publication-item.html pub=pub %}
+      {%- endunless -%}
     {%- endfor -%}
   {%- endfor -%}
 </div>
