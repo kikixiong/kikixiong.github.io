@@ -1,7 +1,9 @@
-{%- comment -%} One chronological list, newest first. {%- endcomment -%}
-{%- assign sorted = site.data.publications.publications | sort: "date" | reverse -%}
+{%- comment -%} Newest dates first; keep source order for papers sharing a date. {%- endcomment -%}
+{%- assign dated_groups = site.data.publications.publications | group_by: "date" | sort: "name" | reverse -%}
 <div class="ox-pub-list">
-  {%- for pub in sorted -%}
-    {% include publication-item.html pub=pub %}
+  {%- for dated_group in dated_groups -%}
+    {%- for pub in dated_group.items -%}
+      {% include publication-item.html pub=pub %}
+    {%- endfor -%}
   {%- endfor -%}
 </div>

@@ -1,3 +1,5 @@
+# Sort by final venue publication date; use acceptance date when proceedings
+# are pending, or the first public preprint date when there is no venue.
 publications:
 
   - title: "Rethinking One Gene, One Token: Transcriptome-Aware Tokenization for Single-Cell Foundation Models"
@@ -67,7 +69,7 @@ publications:
     authors: "Emma Kondrup, Sebastian Sabry, Hussein Abdallah, Zachary Yang, **Jiaqi Xiong**, Kellin Pelrine, James Zhou, Zhijin Guo, Michael M. Bronstein, Jean-François Godbout, Reihaneh Rabbany, Shenyang Huang"
     venue: "KDD 2026 Datasets and Benchmarks Track"
     venue_short: "KDD '26"
-    date: "2026-06"
+    date: "2026-08-08"
     thumbnail: "images/publications/thumbs/CrediBench.webp"
     tags: ["Temporal Graph", "Misinformation", "Benchmark"]
     links:
@@ -89,7 +91,7 @@ publications:
     authors: "**Jiaqi Xiong**, Yunjia Qi, Qi Cao, Yu Zheng, Yutong Zhang, Ziteng Wang, Ruofan Liao, Weisheng Xu, Sichen Liu"
     venue: "AACL-IJCNLP 2026 (Accepted)"
     venue_short: "AACL-IJCNLP '26"
-    date: "2026-03"
+    date: "2026-11"
     thumbnail: "images/publications/thumbs/DEAF.webp"
     first_author: true
     tags: ["Multimodal", "Benchmark", "MLLM"]
@@ -112,7 +114,7 @@ publications:
     authors: "Weisheng Xu, Qiwei Wu, Jiaxi Zhang, Tan Jing, Yangfan Li, Yuetong Fang, **Jiaqi Xiong**, Kai Wu, Rong Ou, Renjing Xu"
     venue: "CVPR 2026"
     venue_short: "CVPR '26"
-    date: "2026-02"
+    date: "2026-06"
     thumbnail: "images/publications/thumbs/CLAIMS.webp"
     tags: ["Humanoid", "Motion", "Robotics"]
     links:
@@ -132,7 +134,7 @@ publications:
     authors: "Bin Yang, Rong Ou, Weisheng Xu, **Jiaqi Xiong**, Xintao Li, Taowen Wang, Luyu Zhu, Xu Jiang, Jing Tan, Renjing Xu"
     venue: "AACL-IJCNLP 2026 (Accepted)"
     venue_short: "AACL-IJCNLP '26"
-    date: "2026-02"
+    date: "2026-11"
     thumbnail: "images/publications/thumbs/T2MBench.webp"
     tags: ["Text-to-Motion", "Benchmark", "Generalization"]
     links:
@@ -215,7 +217,7 @@ publications:
     authors: "Weicai Long, Houcheng Su, **Jiaqi Xiong**, Yanlin Zhang"
     venue: "bioRxiv (Accepted at ISMB 2025)"
     venue_short: "ISMB '25"
-    date: "2025-01"
+    date: "2025-07-15"
     thumbnail: "images/publications/thumbs/MutBERT.webp"
     tags: ["Genomics", "Foundation Model", "BERT"]
     links:
@@ -234,7 +236,7 @@ publications:
     authors: "Weisheng Xu\\*, Sifan Zhou\\*, **Jiaqi Xiong**, Ziyu Zhao, Zhihang Yuan"
     venue: "Knowledge-Based Systems (Accepted)"
     venue_short: "KBS '26"
-    date: "2026-09"
+    date: "2026-10-25"
     thumbnail: "images/publications/thumbs/PillarTrack.webp"
     tags: ["3D Tracking", "Point Cloud", "Transformer"]
     links:
